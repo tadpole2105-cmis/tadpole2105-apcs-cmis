@@ -13,10 +13,12 @@ public class Math
          System.out.println( +num1 + "+" +num2 + "=" +sum);
          System.out.println( +num2 + "+" +num1 + "=" +sum);
          
-         float dif= 0;
-         dif=  num2 - num1;
-         System.out.println(+num1 + "-" +num2 + "=" +dif);
-         System.out.println(+num2 + "-" +num1 + "=" +dif);
+         float dif1= 0;
+         float dif2= 0;
+         dif1=  num2 - num1;
+         dif2=  num1 - num2;
+         System.out.println(+num1 + "-" +num2 + "=" +dif2);
+         System.out.println(+num2 + "-" +num1 + "=" +dif1);
          
          float mul=0;
          mul= num2*num1;
@@ -34,7 +36,8 @@ public class Math
          float mod2=0;
          mod1= num1%num2;
          mod2= num2%num1;
-        
+         System.out.println(+num1 + "%" +num2 + "=" +mod2);
+         System.out.println(+num2 + "%" +num1 + "=" +mod1);
         }
         {
         

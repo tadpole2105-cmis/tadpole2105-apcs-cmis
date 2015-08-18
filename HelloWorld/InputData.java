@@ -9,5 +9,5 @@ public class InputData
          
         } // end mehod main
         
-    } // end class HelloWorld
+    } // end class Inputdata
          

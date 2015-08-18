@@ -15,5 +15,5 @@ public class NameAge
          
         }    // end mehod main
         
-    } // end class HelloWorld
+    } // end class NameAge
          
