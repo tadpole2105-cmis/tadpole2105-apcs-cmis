@@ -7,8 +7,11 @@ public class Fundamentals3
         
         
         int a = Integer.parseInt (first);
+        
         int mod = 0;
+        
         mod = a%2;
+        
         int one = 1;
         
         if(mod==one)
