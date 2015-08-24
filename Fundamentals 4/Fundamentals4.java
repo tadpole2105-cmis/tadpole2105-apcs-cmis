@@ -1,16 +1,17 @@
 
 import javax.swing.JOptionPane;
+import java.util.Random;
 public class Fundamentals4
 {
     public static void main ( String[] args )
             {   
-                int second =0;
+                
                 
                 for ( int first = 1; first <= 10; first++)
                 
                 {
                            
-                           System.out.println(+ first +  "\t"); System.out.println(+ second);
+                           System.out.println(+ first +  "\t" + first*first + "\t" + ( int )(first*( first  + Math.random() )) );
                            
                 }//end class 
                 
