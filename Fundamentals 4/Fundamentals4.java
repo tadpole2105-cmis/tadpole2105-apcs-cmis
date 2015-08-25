@@ -11,7 +11,7 @@ public class Fundamentals4
                 
                 {
                            
-                           System.out.println(+ first +  "\t" + first*first + "\t" + ( int )(first*( first  + Math.random() )) );
+                           System.out.println(+ first +  "\t" + first*first + "\t" + ( int )(first+( first  * Math.random() )) );
                            
                 }//end class 
                 
