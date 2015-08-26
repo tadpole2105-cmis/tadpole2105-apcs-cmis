@@ -1,5 +1,6 @@
-
+import java.util.Arrays;
 public class Fundamentals5
+
 {
    public static void main (String[] args)
    {
@@ -9,9 +10,22 @@ public class Fundamentals5
             movies[1] = "Harry Potter";
             movies[2] = "Star Wars";
         }//end array movies
-        for( String movies )
+        String[] songs= new String[3];
         {
-            System.out.println(movies[0] + "\t" + movies[1] + "\t" + movies[3]);
-        } // end string movies
+            songs[0] = "Chameleon";
+            songs[1] = "The cave";
+            songs[2] = "Demons";
+        }//end array songs
+       for(int num=0; num< movies.length; num++)
+        {
+            System.out.println(movies[num]+"\n"+"\n");
+        }//end for loop
+       int count = 1 ;
+       while ( count<2) 
+        {
+            System.out.println(Arrays.toString(songs));
+            count++;
+        }//end while loop
+       
    }//end main
 }//end fun5
