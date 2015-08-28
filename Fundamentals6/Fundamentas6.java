@@ -13,7 +13,7 @@ public class Fundamentas6
                     for (int index = 0; index < num.length; index++)
                         {
                             int numNew = (int)(100-( index* Math.random()));
-                            System.out.println(numNew);
+                            System.out.println(numNew + "\n");
                             
                         }//end for loop - assign random value to each num
                 }//end array 
