@@ -1,33 +1,17 @@
-
-/**
- * Write a description of class Fundamentals7 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.util.Arrays;
+import java.util.Random;
+import javax.swing.JOptionPane;
 public class Fundamentals7
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Fundamentals7
-     */
-    public Fundamentals7()
+    public static void main (String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
+        int[] array= new int[10];
+        for (int num=10; num<array.length; num++)
+            {
+                int array[num]= 100-(Math.random());
+                System.out.print(array[num]);
+            }//end for loop
+        
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
-}
+    }//end main
+}// end fun7
