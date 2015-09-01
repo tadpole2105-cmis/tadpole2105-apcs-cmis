@@ -21,7 +21,7 @@ public class Fundamentals7
                     array[num]= (int)(100*(Math.random()));
                     System.out.print(array[num]);
                     counterf++;
-                        if (num=(int)(array.length-1))
+                        if (num==(int)(array.length-1))
                             {
                                    System.out.print("the there are "+ counterf + " positive numbers in the for loop" );
                             }//end if counter
@@ -49,7 +49,7 @@ public class Fundamentals7
                    array[numw]= (int)(-100*(Math.random()));
                    System.out.println(array[numw]);
                    counterw++;
-                        if (num=array.length-1)
+                        if (numw==array.length-1)
                             {
                                     System.out.print("the there are "+ counterw + " positive numbers in the for loop" );
                             }//end if counter
@@ -59,7 +59,7 @@ public class Fundamentals7
                
             }//end while
         
-        System.out.print("the there are "+ counterw + " positive numbers in the while loop" );
+        
                 
             
         
