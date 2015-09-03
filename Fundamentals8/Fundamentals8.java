@@ -11,23 +11,44 @@ public class Fundamentals8
             artists[1]="Paramore";
             artists[2]="Ariana Grande";
         }//end array artist 
+        
         for (int index=0; index<artists.length; index++)
         {
-            int overwrite= (int)(index+(Math.random()));
-            
-            if (overwrite==0 && overwrite==1)
-                {
-                    System.out.println("Micheal Jackson");
-                }//end if 
+            System.out.println(artists[index]);
+        }//end for loop 1
+        
+        artists[(int)(Math.random() * 4)] = "Micheal Jackson"; //assign mj to a random number of the artist array, has to be outside loop otherwise there might be more than 1 mj
+        
+        
+        for (int index=0; index<artists.length; index++)
+        {
+         
+             System.out.println(artists[index]);
+                
+        }//end for loop2
+        
+        for (int index=0; index<artists.length; index++)
+        {
+            if (artists[index].equals("Micheal Jackson"))//artists will pick up an increasing # each time it loops but where mj is defined is already fixed since it came before loop2
+            {
+                System.out.println("found mj");
+                
+            }//end if 
             else
-                {
-                    System.out.println(artists[index]);
-                }//end else
-        }//end for loop
+            {
+                System.out.println("no mj");
+            }//end else 
+        }//end for loop3
+       
+        
     }//end main
 }//end fun8
 
 
-//Next, use Math.random() to select a random index in the array in which to place “Michael Jackson”, effectively overwriting one of your three favorite artists. 
-//Print the array a second time using a for loop verifying that “Michael Jackson” has arrived. Use a third for loop to traverse the array and find “Michael Jackson”.
-// Print a statement for each element in the array stating whether or not you found Michael. 
+//If you want to generate a number from 0 to 100 then your code would look like this:
+//(int)(Math.random() * 101);
+
+
+//To generate a number from 10 to 20 :
+//(int)(Math.random() * 11 + 10);
+
