@@ -8,19 +8,26 @@ public class Test1
     {
         String usernum = JOptionPane.showInputDialog ("Enter a number");
         int arraylength = Integer.parseInt(usernum);
-        int[] array = new int[arraylength];
+        double[] array = new double[arraylength];
         int counterf=0;
         for (int num=0; num<array.length; num++)
             {
-                double randomnum = Math.random();
-                System.out.println(num + "\t" + (double)(Math.random()*(50+1))  );
                 
-                
-                
-                
-               
+                array[num] = (double)(Math.random()*(50+1));
+                System.out.println(num + "\t" + array[num]  );
+   
                 
               }//end for loop  
+        for (int num1=array.length; num1>=0; num1--)
+            {
+                for (int num2=0; num2<array.length; num2++)
+                {
+                    array[num2] = (double)(Math.random()*(50+1));
+                    String reverse = //change array num to string 
+                }//reverse random
+                System.out.println(num1 + "\t" + reverse);
+            }// end for loop
+        
     }//end main
 }//end class test1
               
