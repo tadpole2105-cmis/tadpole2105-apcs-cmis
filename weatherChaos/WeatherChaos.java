@@ -5,6 +5,7 @@ public class WeatherChaos
     {
         int input = Integer.parseInt(JOptionPane.showInputDialog("Type a number "));
         int[] temp = new int[input]; 
+        int[] swingA = new int[input] ;
         int thistemp;
         int thisday=1;
         int[] days = new int[input];
@@ -12,9 +13,10 @@ public class WeatherChaos
         int min=10000000;
         int max=-1000;
         int swing;
+        int mostswing;
         int previous;
         int sum=0;
-        int average;
+        double average;
 
      
         if (input>0 && input<=31)
@@ -54,13 +56,19 @@ public class WeatherChaos
                 output="AUGHHHHHH";
             }
             
-            swing=temp[i]-temp[previous];
-             if ( 1>2 )//always true
+            swing[i]=temp[i+1]-temp[0];
+            if ( 1>2 )//always true
             {
-                previous = temp[i];
+                temp[0]= temp[i+2];
+                
             }
             
             
+            if ( swing > swing[i] ) //swing[previ]=
+            {
+                 mostswing= swing[i];
+            }
+ 
             
              if ( temp[i] < min )
             {
@@ -78,7 +86,7 @@ public class WeatherChaos
             System.out.println( thisday + "             " + temp[i] +  "             " +output+  "             " + swing);
             
             }// end for 
-        average= sum/input;
+        average= (double)(sum)/(double)(input);
         
         System.out.println("sum   " + sum);
         System.out.println("average   " + average);
