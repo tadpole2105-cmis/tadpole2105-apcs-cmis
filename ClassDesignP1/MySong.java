@@ -2,7 +2,7 @@ public class MySong
 {
     //create instance variable
     private String name;
-    private String catagory;
+    private String category;
     private double length;//in mins
     //constructors to initialize instance variables
     
@@ -15,9 +15,9 @@ public class MySong
     
     public MySong(String name, String category, double length)
     {
-        name= name;
-        category= category;
-        length= length;
+        this.name= name;
+        this.category= category;
+        this.length= length;
     }//end constructor
     
     public String toString()

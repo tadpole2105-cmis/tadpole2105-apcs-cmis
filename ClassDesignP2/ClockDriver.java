@@ -4,8 +4,8 @@ public class ClockDriver
     {
        
     
-        Clock clock=new Clock(12,42,33); 
-        Clock clockUser= new Clock();
-        System.out.print(clock );
+        Clock clock=new Clock(); 
+        Clock clockUser= new Clock(0,0,0);
+        System.out.print(clock +"\n"+ clockUser);
     }//end method main
 }
