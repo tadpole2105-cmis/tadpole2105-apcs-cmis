@@ -1,33 +1,31 @@
-
-/**
- * Write a description of class Card here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import javax.swing.JOptionPane;
 public class Card
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class Card
-     */
-    public Card()
+
+    public card1(String ranks, String suits)
     {
-        // initialise instance variables
-        x = 0;
+        this.ranks=ranks;
+        this.suits=suits;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+   
+     public card2(String ranks, String suits)
     {
-        // put your code here
-        return x + y;
+        this.ranks=ranks;
+        this.suits=suits;
+    }
+    
+     public card3(String ranks, String suits)
+    {
+        this.ranks=ranks;
+        this.suits=suits;
+    }
+    
+    
+    public String toString()
+    {
+        String output = new String();
+        output = "This pencil is " + color + "\n" + "has eraser? : " + hasEraser ; 
+        return output;
     }
 }
