@@ -9,18 +9,16 @@ public class Cubiverse
     private double z;
     private int volume;
     private String name;
-    private double nameR;
     private double dl;
     private double db;
     private double dbo;
     public Cubiverse()
     {
         name="Default Cubiverse";
-        nameR= Math.random();
         w=1;
         h=1;
         d=1;
-        volume=1;
+        volume=w*h*d;
         x=0.50;
         y=0.50;
         z=0.50;
@@ -35,8 +33,7 @@ public class Cubiverse
         this.h=h;
         this.d=d;
         this.name=name;
-        nameR= Math.random();
-        this.volume=1;
+        this.volume=w*h*d;
         x=0.50;
         y=0.50;
         z=0.50;
@@ -51,8 +48,7 @@ public class Cubiverse
         this.h=1;
         this.d=1;
         this.name=name;
-        nameR= Math.random();
-        this.volume=1;
+        this.volume=w*h*d;
         this.x=x;
         this.y=y;
         this.z=z;
@@ -64,7 +60,7 @@ public class Cubiverse
     public String toString()
     {
         String output = new String();
-        output = name + "\n"+ "w :"+ w+ "\n" + "h: " + h + "\n" + "d; " + d + "\n" + "volume" +volume+ "\n" + "x: " + x+ "\n" + "y: " + y+"\n"+ "z: " +z + "\n" + "distance from left:" + dl +"\n"+ "distance from back" + db +"\n"+ "distance from bottom"+ dbo; 
+        output = name + "\n"+ "w :"+ w+ "\n" + "h: " + h + "\n" + "d; " + d + "\n" + "volume" +volume+ "\n" + "x: " + x+ "\n" + "y: " + y+"\n"+ "z: " +z + "\n" + "distance from left:" + dl +"\n"+ "distance from back" + db +"\n"+ "distance from bottom"+ dbo +"\n"; 
         return output;
     }
 }

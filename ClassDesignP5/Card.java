@@ -2,6 +2,8 @@ import javax.swing.JOptionPane;
 public class Card
 {
 
+       
+    private String ranks, suits;
 
     public card1(String ranks, String suits)
     {
@@ -24,8 +26,10 @@ public class Card
     
     public String toString()
     {
-        String output = new String();
-        output = "This pencil is " + color + "\n" + "has eraser? : " + hasEraser ; 
+        String output = String.format("card1%s\n"+
+                                       "card3%s\n"+
+                                       "card2%s\n", card1, card2, card3);
+        
         return output;
     }
 }
