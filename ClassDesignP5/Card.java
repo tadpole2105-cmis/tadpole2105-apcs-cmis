@@ -1,34 +1,28 @@
 import javax.swing.JOptionPane;
+import java.util.Random;
 public class Card
 {
 
-       
-    private String ranks, suits;
+    private String rank, suit;
+    String[] ranks= { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+    String[] suits= {"clubs","spade","diamonds","hearts"};
+    String Card;
+               
+    int randomslotranks = new Random().nextInt(ranks.length);
+    int randomslotsuits= new Random().nextInt(suits.length);
 
-    public card1(String ranks, String suits)
+       
+    public Card()
     {
-        this.ranks=ranks;
-        this.suits=suits;
+        this.rank=ranks[randomslotranks];
+        this.suit=suits[randomslotsuits];
     }
    
-     public card2(String ranks, String suits)
-    {
-        this.ranks=ranks;
-        this.suits=suits;
-    }
-    
-     public card3(String ranks, String suits)
-    {
-        this.ranks=ranks;
-        this.suits=suits;
-    }
     
     
     public String toString()
     {
-        String output = String.format("card1%s\n"+
-                                       "card3%s\n"+
-                                       "card2%s\n", card1, card2, card3);
+        String output = String.format("card: %s %s \n", rank, suit);
         
         return output;
     }
