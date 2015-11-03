@@ -4,45 +4,27 @@ public class BLackjack
 {
     
     private String rank, suit;
+    
     String[] ranks= { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
     String[] suits= {"clubs","spade","diamonds","hearts"};
     String Card;
-               
-    String[] dealer= new String[2];
-    String[] player1= new String[2];
-    String[] player2= new String[2];
-    String[] player3= new String[2];
-    String[] player4= new String[2];
-    String[] player5= new String[2];
-    
-    String[] totalcards= new String[12];
-    
-    
-    int randomslotranks = new Random().nextInt(ranks.length);
-    int randomslotsuits= new Random().nextInt(suits.length);
-    
-    for (int i=0; i>12; i++)// assign 1 card to each of the 12 slots in total cards 
-    {
-        card[i]=ranks[randomslotranks]+suits[randomslotsuits];
-        totalcards[i] = card[i];
-        
-    }
-    
-    for (int i=0; i>6; i++)// assign 
-    {
-    }
+     
+    int randomslotranks = new Random().nextInt(13);
+    int randomslotsuits= new Random().nextInt(4);
     
     public BLackjack()
     {
         this.rank=ranks[randomslotranks];
         this.suit=suits[randomslotsuits];
+        this.Card=rank+suit;
     }
    
-    
-    
     public String toString()
     {
-        String output = String.format("card: %s %s \n", rank, suit);
+        String output = String.format("card1: %s %s \n"+
+        "card1: %s %s \n"+
+        "card1: %s %s \n"+
+        "card1: %s %s \n"+"card1: %s %s \n"+, rank, suit);
         
         return output;
     }
