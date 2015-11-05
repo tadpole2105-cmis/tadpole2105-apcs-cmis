@@ -3,28 +3,33 @@ import java.util.Random;
 public class BLackjack
 {
     
-    private String rank, suit;
+    String rank1, suit1, rank2, suit2;
     
     String[] ranks= { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
     String[] suits= {"clubs","spade","diamonds","hearts"};
-    String Card;
+    String Card1;
+    String Card2;
      
-    int randomslotranks = new Random().nextInt(13);
-    int randomslotsuits= new Random().nextInt(4);
+    int randomslotranks1 = new Random().nextInt(13);
+    int randomslotsuits1= new Random().nextInt(4);
+    int randomslotranks2 = new Random().nextInt(13);
+    int randomslotsuits2= new Random().nextInt(4);
     
     public BLackjack()
     {
-        this.rank=ranks[randomslotranks];
-        this.suit=suits[randomslotsuits];
-        this.Card=rank+suit;
+        this.rank1=ranks[randomslotranks1];
+        this.suit1=suits[randomslotsuits1];
+        this.Card1=rank1+suit1;
+        
+        this.rank2=ranks[randomslotranks2];
+        this.suit2=suits[randomslotsuits2];
+        this.Card2=rank2+suit2;
     }
    
     public String toString()
     {
         String output = String.format("card1: %s %s \n"+
-        "card1: %s %s \n"+
-        "card1: %s %s \n"+
-        "card1: %s %s \n"+"card1: %s %s \n"+, rank, suit);
+        "card2: %s %s \n", rank1, suit1,rank2, suit2);
         
         return output;
     }
