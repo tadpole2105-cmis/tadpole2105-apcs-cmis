@@ -17,6 +17,9 @@ public class BLackjackApp
     BLackjack[] player5= new BLackjack[2];
      
     
+    //no need for for loop 
+    //blackjack d = new blackjack ()
+    
     int value1;
     int value2;
     
@@ -25,9 +28,9 @@ public class BLackjackApp
      
      {
         BLackjack cards = new BLackjack();
-       
+        
         //for rank1
-        if (dealer[i].rank1.equals("A")) // go look at rank1 for card 1 of dealer
+        if (dealer[].rank1.equals("A")) // go look at rank1 for card 1 of dealer
         {
             value1=11;
         }

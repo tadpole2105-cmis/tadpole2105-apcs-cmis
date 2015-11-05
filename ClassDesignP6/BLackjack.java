@@ -9,14 +9,16 @@ public class BLackjack
     String[] suits= {"clubs","spade","diamonds","hearts"};
     String Card1;
     String Card2;
-     
+    
+    
+    public BLackjack()
+    {
+         
     int randomslotranks1 = new Random().nextInt(13);
     int randomslotsuits1= new Random().nextInt(4);
     int randomslotranks2 = new Random().nextInt(13);
     int randomslotsuits2= new Random().nextInt(4);
-    
-    public BLackjack()
-    {
+        
         this.rank1=ranks[randomslotranks1];
         this.suit1=suits[randomslotsuits1];
         this.Card1=rank1+suit1;
