@@ -1,3 +1,4 @@
+    import javax.swing.JOptionPane;
 public class MySong
 {
     //create instance variable
@@ -5,10 +6,11 @@ public class MySong
     private String category;
     private int length;
     private int yearReleased;
+    
     private String newlength;
-    
 
-    
+   String password = JOptionPane.showInputDialog ("please enter password"); //pass is 1234
+   
     public MySong( String name, String category, int length, int yearReleased)
     {
         this.name= name;
@@ -24,8 +26,14 @@ public class MySong
     }
     public void setYearReleased(int yearreleased)
     {
-       
-        this.yearReleased=yearreleased;
+       if (password.equals("1234"))
+       {
+           this.yearReleased=yearreleased;
+       }
+       else
+       {
+       }
+        
     }
     
     
@@ -34,6 +42,17 @@ public class MySong
         
         newlength=new String(length/60 + length%60);
         return newlength; //divide length by 60, mod length by 60
+    }
+    
+   
+        public int getLength()
+    {
+        return   length;
+    }
+    public void setYearReleased(int NewLength)
+    
+
+           this.length=NewLength;
     }
     
     
