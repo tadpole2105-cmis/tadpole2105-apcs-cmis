@@ -6,6 +6,7 @@ comment1.target=int\ getYearReleased()
 comment2.params=yearreleased
 comment2.target=void\ setYearReleased(int)
 comment3.params=
-comment3.target=java.lang.String\ toString()
-comment3.text=\r\n\ \ \ \ public\ String\ ConvertLength()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ newlength\=new\ String(length/60\ +\ length%60);\r\n\ \ \ \ \ \ \ \ return\ newlength;\ //divide\ length\ by\ 60,\ mod\ length\ by\ 60\r\n\ \ \ \ }\r\n\ \ \ \ \r\n
-numComments=4
+comment3.target=java.lang.String\ convertLength()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

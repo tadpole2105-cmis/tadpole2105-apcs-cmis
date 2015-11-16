@@ -36,33 +36,20 @@ public class MySong
         
     }
     
-    
-    public String ConvertLength()
+     public String convertLength()
     {
-        
-        newlength=new String(length/60 + length%60);
-        return newlength; //divide length by 60, mod length by 60
+        newlength= (Integer.toString(length/60)) + " minutes " + (Integer.toString(length%60)) + " seconds.";
+        return newlength;
     }
-    
-   
-        public int getLength()
-    {
-        return   length;
-    }
-    public void setYearReleased(int NewLength)
-    
 
-           this.length=NewLength;
-    }
-    
-    
+   
     
     public String toString()
     {
         String output = new String();
         output = "Song's name is " + name + "\n" +
                  "Category : " + category + "\n" +
-                 "length: " + length +"\n" +
+                 "length (in minutes): " + length +"\n" +
                  "year released:" + yearReleased;
         return output;
     }
