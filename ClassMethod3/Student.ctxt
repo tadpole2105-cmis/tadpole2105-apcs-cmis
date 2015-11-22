@@ -1,8 +1,14 @@
 #BlueJ class context
-comment0.params=fname\ lname\ age\ isThai
-comment0.target=Student(java.lang.String,\ java.lang.String,\ int,\ boolean)
+comment0.params=english\ math\ science\ arts\ social
+comment0.target=Student(double,\ double,\ double,\ double,\ double)
 comment1.params=
 comment1.target=Student()
-comment2.params=
-comment2.target=java.lang.String\ toString()
-numComments=3
+comment1.text=\r\n\ \ \ \ public\ double\ getGrades()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ double[]\ studentGrades\ \={this.A,\ this.Am,\ this.Bp,\ this.B,\ this.Bm\ };\r\n\ \ \ \ \ \ \ \ return\ studentGrades;\r\n\ \ \ \ }\ //put\ values\ of\ grades\ A,\ Am....\ into\ each\ slot\ of\ studentGrades\ array\ before\ returning\r\n\ \ \ \ ////////////////\ \r\n
+comment2.params=fname\ lname\ age\ english\ math\ science\ arts\ social
+comment2.target=Student(java.lang.String,\ java.lang.String,\ int,\ double,\ double,\ double,\ double,\ double)
+comment3.params=
+comment3.target=double\ aveGPA()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ \ \ \ public\ void\ setgrades(double\ newgrade)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ for\ (int\ i\=0;\ i<studentGrades.length;\ i++)\r\n\ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ if\ (studentGrades[i]<\=4.0\ &&\ studentGrades[i]>3.70)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ studentGrades[i]\=\ "A";\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ else\ if\ (studentGrades[i]<\=3.70\ &&\ studentGrades[i]>3.30)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ studentGrades[i]\=\ "Am";\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ else\ if\ (studentGrades[i]<\=3.30\ &&\ studentGrades[i]>3.00)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ studentGrades[i]\=\ "Bp";\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ else\ if\ (studentGrades[i]<\=3.0\ &&\ studentGrades[i]>2.70)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ studentGrades[i]\=\ "B";\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ studentGrades[i]\=\ "Bm";\r\n\ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+numComments=5
