@@ -20,11 +20,11 @@ public class Student
 
     
        //these are the random grades (0.0 -4.0) for each subject that will be put into the setter method 
-    private double english = Math.random()*4;
-    private double math = Math.random()*4;
-    private double science = Math.random()*4;
-    private double arts = Math.random()*4;
-    private double social = Math.random()*4;
+    private double english = 0;
+    private double math = 0;
+    private double science = 0;
+    private double arts = 0;
+    private double social =0;
     
  
     private double GPA,aveGPA;
@@ -53,16 +53,16 @@ public class Student
     
     public Student()
     {
-       fname="Lek";
-       lname="Wang";
+       fname="Voldemort";
+       lname="Lee";
        age=6;
        for (int i=0; i<studentGrades.length; i++)
        {
-           studentGrades[i]=0.0;
+           studentGrades[i]=Math.random()*4;
        }//set all slots of studentGrades array to 0.0
     }//end single arg constructor 
     
-    
+
     
     public Student(String fname, String lname, int age, double english, double math, double science, double arts, double social)///put array in muti agr?
     {
@@ -79,48 +79,19 @@ public class Student
     
     public double aveGPA()
     {
+            double totalGPA=0;
         for (int i=0;i<studentGrades.length; i++)
         {
-            GPA += studentGrades [i];
+            totalGPA += studentGrades [i];
         }
-        aveGPA= GPA /(double)(studentGrades.length);
+        aveGPA= totalGPA /5;
         return aveGPA;
     }
-    
-    /*
-    public void setgrades(double newgrade)
-    {
-         for (int i=0; i<studentGrades.length; i++)
-         {
-             if (studentGrades[i]<=4.0 && studentGrades[i]>3.70)
-             {
-                 studentGrades[i]= "A";            
-             }
-             else if (studentGrades[i]<=3.70 && studentGrades[i]>3.30)
-             {
-                 studentGrades[i]= "Am";            
-             }
-             else if (studentGrades[i]<=3.30 && studentGrades[i]>3.00)
-             {
-                 studentGrades[i]= "Bp";            
-             }
-             else if (studentGrades[i]<=3.0 && studentGrades[i]>2.70)
-             {
-                 studentGrades[i]= "B";            
-             }
-             else
-                 studentGrades[i]= "Bm";
-         }
-    }
-    */ //can use instance variable to define grade range, use arg con to initialize
-    
+
     public String toString()
     {
         String output = String.format(
-            "first name: %s \n "+
-            "last name: %s \n " +
-            "age: %d \n" +
-            "average GPA %.2f \n,    fname, lname, age, aveGPA");
+            "first name: %s \n last name: %s \n  age: %d \n  average GPA %.2f \n",    fname, lname, age, aveGPA());
         return output;
     }
 }//end class MySOng
