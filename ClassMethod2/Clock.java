@@ -7,52 +7,40 @@ public class Clock
     private int hour ;
     private int minutes ;
     private int seconds ;
-     
+    private int totalsecs;
     
      
     public Clock(int hour, int minutes, int seconds)
     {
         this.hour=Integer.parseInt(JOptionPane.showInputDialog("enter the hour"));
         this.minutes=  Integer.parseInt(JOptionPane.showInputDialog("enter the minutes"));
-        this.seconds=Integer.parseInt(JOptionPane.showInputDialog("enter the seconds"));
+
     }//end constructor
-
-    public int setTimeHour()
-    {
-        return   hour;
-
-    }
-       public int setTimeMin()
-    {
-        return   minutes;
-
-    }
-       public int setTimeSec()
-    {
-        return   seconds;
-
-    }
-    public void setTime(int newhour, int newminute, int newsecond)
-    {
-
-           this.hour=newhour;
-           this.minutes=newminute;
-           this.seconds=newsecond;
-
-    }
-    
-    public int convertDaylightSaving( int hours )
-    {
     
     
+    public void setTime(int hour, int minutes, int seconds)
+    {
+        this.hour=hour;
+        this.minutes=minutes;
+        this.seconds=seconds;
     }
     
-    
+    public int calcsecs()
+    {
+        totalsecs= (hour*3600) + (minutes*60) + seconds;
+        return totalsecs;
+    }
+   
+    public void convertDaylightSaving( int savingsHour)//void because it's a setter method
+    {
+        this.hour+=savingsHour;
+        
+    }
     
     public String toString()
     {
-        String output = new String();
-        output = "The time is " + hour + ": " + minutes + ": " + seconds ;
+        String output = "The time is " + hour + ": " + minutes + ": " + seconds + "\n"
+                  + "which is : " + calcsecs() +"seconds in total " + "\n";
         return output;
     }
 }//end class MySOng
