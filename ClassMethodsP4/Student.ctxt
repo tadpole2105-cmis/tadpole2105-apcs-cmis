@@ -13,5 +13,5 @@ comment5.params=english\ math\ science\ arts\ social
 comment5.target=void\ setGPA(double,\ double,\ double,\ double,\ double)
 comment6.params=
 comment6.target=java.lang.String\ toString()
-comment6.text=\ \ \ how\ to\ return\ array?\r\n\ \ \ \ public\ double\ printGPA()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ return\ studentGrades[];\ \ \ \r\n\ \ \ \ }\r\n
+comment6.text=\ \ \ how\ to\ return\ array?\n\ \ \ \ public\ double\ printGPA()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ return\ studentGrades[];\ \ \ \n\ \ \ \ }\n
 numComments=7

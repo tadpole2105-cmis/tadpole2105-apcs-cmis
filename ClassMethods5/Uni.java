@@ -1,29 +1,31 @@
 
-import javax.swing.JOptionPane;
 public class Uni
 {
-    private String s1="UBC";
-    private String s2="UCIC";
-    private String s3="Bristols";
+    public static void main (String[] args)
+    {
+     String s1= new String("UBC");
+     String s2=new String("UCIC");
+     String s3=new String("Bristols");
    
-    public String compareTo()
-    {
-        
-    }
     
     
-    public String toString()
-    {
-        String output = 
-        return output;
+    System.out.println(s1.compareTo(s2));
+    System.out.println(s1.compareTo(s3));
+    System.out.println(s2.compareTo(s1));
+    System.out.println(s2.compareTo(s3));
+    System.out.println(s3.compareTo(s1));
+    System.out.println(s3.compareTo(s2));
     }
 }
 
 
+//the output of compareTo() will give the number of difference in terms of alphabetical order between the strings being compared
+//When compreTo() sees two same letters, it ignors both and moves on to compare the next two letters. If it cannot find any different letters, it returns 0
 
 /*
 Write a program that creates three String objects. Each String should be the name of a university to which you are applying. 
-Now we are going to compare the universities with the String method compareTo(). Print out the result of comparing each school to another. For example, if s1 and s2 are defined as follows: 
+Now we are going to compare the universities with the String method compareTo(). Print out the result of comparing each school to another.
+ For example, if s1 and s2 are defined as follows: 
 
 
 

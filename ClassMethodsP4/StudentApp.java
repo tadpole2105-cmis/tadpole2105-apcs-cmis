@@ -18,7 +18,7 @@ public class StudentApp
         Student Junior001= new Student("Ronald","Weasley",16, 3.4, 2.3, 2.3, 4.0, 3.4);
 
         Senior001.setGPA(4.0,4.0,4.0,4.0,4.0);
-        Junior001.setGPA(0.0,0.0,0.0,0.0,0.0);
+        Junior001.setGPA(0.0,0.0,4.0,4.0,0.0);
        
         JOptionPane.showMessageDialog(null,Senior001,  "senior:",JOptionPane.PLAIN_MESSAGE );
         JOptionPane.showMessageDialog(null,Junior001,  "Junior:",JOptionPane.PLAIN_MESSAGE );
