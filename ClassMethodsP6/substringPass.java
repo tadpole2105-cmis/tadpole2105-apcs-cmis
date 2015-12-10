@@ -1,24 +1,34 @@
 import javax.swing.JOptionPane;
 import java.util.Scanner;
-public class newPassword
+public class substringPass
 {
     public static void main (String[] args)
     {
+        
         String userPassword =JOptionPane.showInputDialog("enter password");
         if (userPassword.length() >= 6)
         {
-            if (userPassword.contains("+") || userPassword.contains("-") ||  userPassword.contains("*") ||  userPassword.contains("/") ||  userPassword.contains("@") )//if it contains non alpha
+            for (int i=0; i< userPassword.length(); i++)
             {
-                System.out.print(userPassword);
+                
+                if(userPassword.substring(i, i+1).equals("+") || userPassword.substring(i, i+1).equals("-") || userPassword.substring(i, i+1).equals("*") || userPassword.substring(i, i+1).equals("@") )
+                {
+                    System.out.print(userPassword);
+                    i= userPassword.length();//break loop
+                }
+               else if ( i == userPassword.length())
+               {
+                    System.out.print(userPassword + " does not on contain a non alphabet");
+               
+               }
+               
+               
             }
-            else 
-            {
-                System.out.println("rejected");
-            }
+            
         }
         else 
         {
-            System.out.print("rejected");
+            System.out.print("rejected : less than 6 characters");
         }
        
     }

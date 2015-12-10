@@ -14,15 +14,15 @@ public class Clock
     {
         this.hour=Integer.parseInt(JOptionPane.showInputDialog("enter the hour"));
         this.minutes=  Integer.parseInt(JOptionPane.showInputDialog("enter the minutes"));
-
+       
     }//end constructor
     
     
-    public void setTime(int hour, int minutes, int seconds)
+    public void setTime(String hour, String minutes, String seconds)
     {
-        this.hour=hour;
-        this.minutes=minutes;
-        this.seconds=seconds;
+        this.hour= "0" + (String) (hour);
+        this.minutes= "0" + (String) (minutes);
+        this.seconds="0" +(String)(seconds);
     }
     
     public int calcsecs()
