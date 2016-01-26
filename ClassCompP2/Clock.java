@@ -11,11 +11,16 @@ public class Clock
      
     public Clock(int hour, int minutes, int seconds)
     {
-        this.hour=Integer.parseInt(JOptionPane.showInputDialog("enter the hour"));
-        this.minutes=  Integer.parseInt(JOptionPane.showInputDialog("enter the minutes"));
-        this.seconds=Integer.parseInt(JOptionPane.showInputDialog("enter the seconds"));
+        this.hour=hour;
+        this.minutes=minutes;
+        this.seconds=seconds;
     }//end constructor
-    
+     public int totalSeconds()
+    {
+        int totalsecs=0;
+        totalsecs+= (hour*3600)+(minutes*60)+seconds;
+        return totalsecs;
+    }
     public Clock()
     {
        hour=21;

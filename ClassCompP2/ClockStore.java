@@ -1,33 +1,41 @@
 
-/**
- * Write a description of class ClockStore here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class ClockStore
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class ClockStore
-     */
+    //private  ArrayList<String> ClockInStock = new ArrayList<String>();
+    Clock[] ClockInStock= new Clock [3];
+    private int hour ;
+    private int minutes ;
+    private int seconds ;
     public ClockStore()
     {
-        // initialise instance variables
-        x = 0;
+        ClockInStock[0] = new Clock( 12, 30, 45 );
+        ClockInStock[1] = new Clock( 12, 30, 44 );
+        ClockInStock[2] = new Clock( 12, 30, 46 );
+    
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+   
+    public int mostSeconds()
     {
-        // put your code here
-        return x + y;
+        int index=0;
+        for (int i=0; i< ClockInStock.length; i++)
+        {
+            if (ClockInStock[i].totalSeconds()>ClockInStock[i+1].totalSeconds())
+            {
+                index=i;
+            }
+        }
+        return index;
     }
+    
+     public String toString()
+        {
+        
+        String output = new String();
+        
+        for (Clock clock: ClockInStock)
+        {
+            output += clock +"\n " ;
+        }
+        return output;
+        }
 }
