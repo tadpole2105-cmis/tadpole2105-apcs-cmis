@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=fname\ lname\ age\ isThai
-comment0.target=Student(java.lang.String,\ java.lang.String,\ int,\ boolean)
+comment0.params=fname\ lname\ age\ GPA
+comment0.target=Student(java.lang.String,\ java.lang.String,\ int,\ double)
 comment1.params=
 comment1.target=Student()
 comment2.params=

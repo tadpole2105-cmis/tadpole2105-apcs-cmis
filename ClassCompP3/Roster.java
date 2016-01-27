@@ -1,32 +1,34 @@
 public class Roster
 {
         
-        String[] Students= new String [];
-        public Roster()
+        String[] Students= new String [3];
+       
+        public Roster()//populte Students array
         {
-            Students[0]=Student();
-            Students[1]=Student();
-            Students[2]=Student();
+            Students[0]=Student("Norton", "Max", 22, 4.0);
+            Students[1]=Student("Stevenson","Ingrid",21,2.4);
+            Students[2]=Student("Songla","Su",15, 3.2);
         }
         
-        public Ipod(String color, int memory, String song,String song1,String song2)
+       public String getHighestGPA()
+       {
+        String highestGPAStudent;
+        for (int i=0; i<Students.length; i++)
         {
-            this.color= color;
-            this.memory= memory;
-            songLibrary.add(song);
-            songLibrary.add(song1);
-            songLibrary.add(song2);
+            if (Students[i].GPA>Students[i+1].GPA)//access grade from Students array
+            {
+                highestGPAStudent=Students[i].lname;//return name of highest GPA
+            }
         }
+        return highestGPAStudent;
+     
+       }
        
         public String toString()
         {
         
         String output = new String();
-        output = "Color " + color  + "\n" +memory  +"\n" + "Songs: "+"\n" ;
-        for (String song : songLibrary)
-        {
-            output+=song ;
-        }
+        output = "name of student with highest GPA : " + gethighestGPA();
         return output;
         }
     

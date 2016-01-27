@@ -6,23 +6,25 @@ public class Student
     private String fname;
     private String lname;
     private int age;
+    private double GPA;
     private boolean isThai;
      
     
      
-    public Student(String fname, String lname, int age, boolean isThai)
+    public Student(String fname, String lname, int age, double GPA)
     {
         this.fname= fname;
         this.lname=  lname;
         this.age= age;
-        this.isThai= isThai;
-    }//end constructor
+        this.GPA= GPA;
+    }
     
     public Student()
     {
        fname="Lek";
        lname="Wang";
        age=6;
+       GPA=3.5;
        isThai=true;;
     }//end userinout constructor 
     
