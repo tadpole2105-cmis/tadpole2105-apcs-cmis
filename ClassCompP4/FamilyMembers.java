@@ -1,44 +1,32 @@
 import java.util.ArrayList;
 public class FamilyMembers
 {
-        private String color;
-        private int memory;
-        private ArrayList<String> songLibrary = new ArrayList<String>();
-        String[] songLibrary1= new String [3];// doesnt get used
-        public Ipod()
+    public static void main (String[] args)
+    {
+        ArrayList<String> FamilyMember = new ArrayList<String>();
+
+        FamilyMember.add("Wichai Kajonpredanon");
+        FamilyMember.add("Pocanie Kajonpredanon");
+        FamilyMember.add("Tetach Kajonpredanon");
+
+        System.out.println("There are " +  FamilyMember.size() + "in the array list" + "\n" + "The members in the family are (for each loop)" );
+        for (String member : FamilyMember)
         {
-            this.color="Silver";
-            this.memory= 16;
-            songLibrary.add("song1");
-            songLibrary.add("song2");
-            songLibrary.add("song3");
+            System.out.println(member );
         }
-        
-        public Ipod(String color, int memory, String song,String song1,String song2)
+
+        System.out.println("normal for loop");
+
+        for (int i = 0; i < FamilyMember.size(); i++ )
         {
-            this.color= color;
-            this.memory= memory;
-            songLibrary.add(song);
-            songLibrary.add(song1);
-            songLibrary.add(song2);
+            System.out.println( FamilyMember.get(i));
         }
-       
-        public String toString()
-        {
-        
-        String output = new String();
-        output = "Color " + color  + "\n" +memory  +"\n" + "Songs: "+"\n" ;
-        for (String song : songLibrary)
-        {
-            output+=song ;
-        }
-        return output;
-        }
-    
+    }
+
 }
 /*
 for ( song: songLibrary)
 {
-    system.out.print song
+system.out.print song
 }
-*/
+ */

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Ipod()
+comment1.params=color\ memory\ song\ song1\ song2
+comment1.target=Ipod(java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3
