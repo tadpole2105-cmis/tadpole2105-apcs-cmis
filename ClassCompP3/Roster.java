@@ -13,7 +13,7 @@ public class Roster
     public String getHighestGPA()
     {
         String highestGPAStudent  = new String();
-        for (int i=0; i<Students.length; i++)
+        for (int i=0; i<Students.length-1; i++)
         {
             if (Students[i].GPA>Students[i+1].GPA)//access grade from Students array
             {
