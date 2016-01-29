@@ -13,23 +13,38 @@ public class Roster2
         myStudents.add(newStudent); //add newStudent to myStudents
     
     }
-    public void dropStudent ( String lastName ) 
+    
+    public  void dropStudent ( String lastName ) 
     {
         
-        for (int i=0; i < myStudents.length; i ++)//search for student with given lastName
+        for (int i=0; i < myStudents.size(); i ++)//search for student with given lastName
         {
-            if (Student.lname.equals(lastName))
+            if (myStudents.get(i).lname.equals(lastName))//myStudents.get(i) is getting Students instances inside arraylist
             {
-                myStudents.remove()//remove student with the given last name 
+                myStudents.remove(myStudents.get(i));//remove student with the given last name 
             }
         }
         
     }
 
+ 
+    public String toString()
+    {
+        String output = new String();
+        for ( Student e : myStudents)
+        {
+            output+=e; 
+        
+        }
+        return output;
+    }
+
+}
+  /*
     public String getHighestGPA()
     {
         String highestGPAStudent  = new String();
-        for (int i=0; i<myStudents.length-1; i++)
+        for (int i=0; i<myStudents.size()-1; i++)
         {
             if (Students[i].GPA>Students[i+1].GPA)//access grade from Students array
             {
@@ -39,13 +54,4 @@ public class Roster2
         return highestGPAStudent;
 
     }
-
-    public String toString()
-    {
-
-        String output = new String();
-        output = "name of student with highest GPA : " + getHighestGPA();
-        return output;
-    }
-
-}
+     */

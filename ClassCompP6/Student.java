@@ -6,9 +6,8 @@ public class Student
     public String lname;
     private int age;
     public double GPA;
-    private boolean isThai;
+    //private boolean isThai;
 
-     
     public Student(String fname, String lname, int age, double GPA)
     {
         this.fname= fname;
@@ -23,13 +22,14 @@ public class Student
         lname="Wang";
         age=6;
         GPA=3.5;
-        isThai=true;;
+        
     }//end userinout constructor 
 
     public String toString()
     {
         String output = new String();
-        output = "Name: " + lname + ", " +fname +"\n" + "Age : "+ age + "\n" + "Is Thai? : " + isThai ;
+        output = "Name: " + lname + ", " +fname +"\n" + "Age : "+ age + "\n" + "\n" ;
         return output;
     }
+    
 }

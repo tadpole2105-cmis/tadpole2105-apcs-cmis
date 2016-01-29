@@ -17,7 +17,7 @@ public class ClockStore
     public int mostSeconds()
     {
         int index=0;
-        for (int i=0; i< ClockInStock.length; i++)
+        for (int i=0; i< ClockInStock.length-1; i++)
         {
             if (ClockInStock[i].totalSeconds()>ClockInStock[i+1].totalSeconds())
             {
@@ -31,7 +31,7 @@ public class ClockStore
         {
         
         String output = new String();
-        
+        output += "most second clock " + mostSeconds() + "\n";
         for (Clock clock: ClockInStock)
         {
             output += clock +"\n " ;
