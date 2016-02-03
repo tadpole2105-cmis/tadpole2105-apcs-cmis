@@ -37,7 +37,7 @@ public class FillNums
             int colsum=0;
             for (int u=0; u< NumGrid.length; u++)
             {
-                colsum+=NumGrid[i][u]; 
+                colsum+=NumGrid[u][i]; 
                 
             }
             System.out.print( "\t" + "colsum = " + colsum +   "\n"  );
