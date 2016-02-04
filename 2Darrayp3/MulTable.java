@@ -12,31 +12,17 @@ public class MulTable
 
         int thisnum= 0;
 
-        for (int rows=0; rows < 10000000; rows++)
+        for (int rows=0; rows < NumGrid.length; rows++)
         {
             for (int col=0; col < NumGrid[0].length; col++)
             {
+                
+                    NumGrid[rows][col]= rows*col;
+                    NumGrid[rows][0]= rows;
+                    NumGrid[0][col]= col;
+                    System.out.print(NumGrid[rows][col]+ "\t");
 
-                NumGrid[rows][col]= thisnum;
-                
-                
-                for (int i=0; i< c; i++ )
-                {
-                    System.out.print(NumGrid[rows][col] + "\t");
-                    
-                }
-                thisnum++;
             }
-            System.out.print(NumGrid[rows+1][0] + "\t");
-            //////////////// this is for the most left column
-            // 
-            //                 thisnum=0;
-            //                 NumGrid[0][rows]= thisnum;
-            //                 thisnum++;
-            //                 NumGrid[0][rows]= thisnum;
-            //                 System.out.print(NumGrid[0][rows] + "\t");
-
-            //////////////////////
 
             System.out.print( "\n"  );
         }
