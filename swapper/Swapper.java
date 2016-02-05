@@ -34,6 +34,10 @@ public class Swapper
 
         int[] rowhighestproduct= new int[10];
         int[] colhighestproduct= new int[10];
+        
+        int rhp=0;
+        int chp=0;
+        
         int rp=0;
         int cp=0;
         int intersection = 0;
@@ -44,55 +48,54 @@ public class Swapper
                 if (grid[rows][col]!=0) // find product
                 {
                     grid[rows][col]= rows*col;
-                    rowhighestproduct[rows]= grid[rows][0];
-                    colhighestproduct[rows]=grid[0][col];
-                    for (int i=0; i<grid[0].length; i++ ) // get row and col number
-                    {
-                        if(rowhighestproduct[i]>rowhighestproduct[i+1]) //[rows] or [i] ??
-                        {
-                            rp=rows;
-                        }
-                        if(colhighestproduct[i]>colhighestproduct[i+1])
-                        {
-                            cp=rows;
-                        }
-                    }
+                    grid[col][rows]= rows*col;//find product of each row and col only when there is no zero
+                    
+                    rowhighestproduct[rows]= grid[rows][col]; //first slot in rowhp array is product of  row 0, col ++
+                    colhighestproduct[rows]=grid[col][rows]; 
+                    
+
+                    
 
                 }//end if 
+
+                if(rowhighestproduct[rows]>rhp) //[rows] or [col] ??  row cuz we only compare when it has finished multiplying
+                {
+                    rp=rows;
+                    rhp = rowhighestproduct[rows];
+                }
+                if(colhighestproduct[rows]>chp)
+                {
+                    cp=rows;
+                    chp =colhighestproduct[rows];
+                }
 
                 if (rows == rp && col == cp) // locate num at inter
                 {
                     intersection= grid[rows][col]; //set the intersec num ans "intersection"
                     grid[rows][col]=0; //set that as 0
                 }//end if 
-                
+
                 if (grid[rows][col]==0) // locate all zeros
                 {
                     grid[rows][col]=intersection;
                 }
-                
+
                 if (grid[rows][col]==intersection) // locate all num intersections 
                 {
                     grid[rows][col]=0;
                 }
-                
-                
+
                 System.out.print(grid[rows][col]);
-                
             }
             System.out.print(  "\n"  );//after each row add a space
         }
-        
 
         
     }
 
                 
                 
-                
-                
 }
-
 
 //     NumGrid[rows][col]= rows*col;
 //                 NumGrid[rows][0]= rows;
