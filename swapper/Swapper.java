@@ -31,50 +31,50 @@ public class Swapper
                 {5, 6, 9, 9, 7, 8, 7, 3, 9, 3},
                 {1, 0, 4, 8, 3, 1, 0, 2, 1, 5},
                 {1, 7, 3, 6, 3, 7, 8, 3, 3, 6}};
-
-        int[] rowhighestproduct= new int[10];
-        int[] colhighestproduct= new int[10];
-        
+        int[] rowproduct= new int[10]; //{0,0,....,0}
+        int[] colproduct= new int[10];
+        for( int  i = 0; i < 10; i++)
+        {
+            rowproduct[i] = 1;
+            colproduct[i] = 1;
+        }
         int rhp=0;
         int chp=0;
-        
         int rp=0;
         int cp=0;
         int intersection = 0;
+        for (int row=0; row < grid.length; row++)
+        {
+            for (int col=0; col < grid[0].length; col++)
+            {
+                if (grid[row][col]!=0) // find product
+                {
+                    rowproduct[row] *= grid[row][col];
+                    colproduct[col] *= grid[row][col];
+                }//end if 
+            }
+        }
+        for(int i = 0 ;i < 10; i ++)
+        {
+            if(rowproduct[i]>rhp) //[rows] or [col] ??  row cuz we only compare when it has finished multiplying
+            {
+                rp=i;
+                rhp = rowproduct[i];
+            }
+            if(colproduct[i]>chp)
+            {
+                cp=i;
+                chp =colproduct[i];
+            }
+        }
+        intersection = grid[rp][cp];
+        System.out.println("--------------");
+        System.out.println("Number replaced = "+ intersection + "(Row " + (rp+1)+", Col "+(cp+1) +")" );
+        System.out.println("--------------");
         for (int rows=0; rows < grid.length; rows++)
         {
             for (int col=0; col < grid[0].length; col++)
             {
-                if (grid[rows][col]!=0) // find product
-                {
-                    grid[rows][col]= rows*col;
-                    grid[col][rows]= rows*col;//find product of each row and col only when there is no zero
-                    
-                    rowhighestproduct[rows]= grid[rows][col]; //first slot in rowhp array is product of  row 0, col ++
-                    colhighestproduct[rows]=grid[col][rows]; 
-                    
-
-                    
-
-                }//end if 
-
-                if(rowhighestproduct[rows]>rhp) //[rows] or [col] ??  row cuz we only compare when it has finished multiplying
-                {
-                    rp=rows;
-                    rhp = rowhighestproduct[rows];
-                }
-                if(colhighestproduct[rows]>chp)
-                {
-                    cp=rows;
-                    chp =colhighestproduct[rows];
-                }
-
-                if (rows == rp && col == cp) // locate num at inter
-                {
-                    intersection= grid[rows][col]; //set the intersec num ans "intersection"
-                    grid[rows][col]=0; //set that as 0
-                }//end if 
-
                 if (grid[rows][col]==0) // locate all zeros
                 {
                     grid[rows][col]=intersection;
@@ -84,18 +84,17 @@ public class Swapper
                 {
                     grid[rows][col]=0;
                 }
-
-                System.out.print(grid[rows][col]);
+                System.out.print(grid[rows][col] + "  ");
             }
-            System.out.print(  "\n"  );//after each row add a space
+            System.out.print("\n");
         }
-
-        
     }
-
-                
-                
 }
+
+
+///mistakes 
+// 1. original num in grid was replaced by product, product supposed to go in col/row product array right away, no need to put somewhere else 
+
 
 //     NumGrid[rows][col]= rows*col;
 //                 NumGrid[rows][0]= rows;
