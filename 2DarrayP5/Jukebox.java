@@ -27,18 +27,17 @@ public class Jukebox
     {
         int randomrow = (int) (Math.random()*(r));
         int randomcol=  (int) (Math.random()*(c));
-        return Jukebox.songList[randomrow][randomcol];
+        return songList[randomrow][randomcol];
     }
 
     public String toString()
     {
         String output = new String();
-        for (int[] rows : songList)
+        for (MySong[] rows : songList)
         {
-            for (int slot : rows)
+            for (MySong slot : rows)
             {
-                songList[rows][slot]= songList[rows][col];
-                output = songList[rows][slot] ;
+                output += rows;
             }
 
             System.out.print( "\n"  );
