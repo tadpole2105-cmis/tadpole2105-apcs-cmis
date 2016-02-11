@@ -37,12 +37,11 @@ public class Jukebox
         {
             for (MySong slot : rows)
             {
-                output += rows;
+                output += slot;
             }
 
             System.out.print( "\n"  );
         }
-
         return output;
     }
 
