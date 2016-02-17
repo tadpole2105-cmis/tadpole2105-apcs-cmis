@@ -2,7 +2,12 @@ public abstract class SuperHero
    {
    private String suitColor;
    private boolean hasCape;
-
+   
+   public abstract String createmotto(); // means that each subclass will have method "createmotto"
+   
+  
+   
+   
    public SuperHero()
       {
       this.suitColor = new String();
@@ -16,20 +21,19 @@ public abstract class SuperHero
       
    public String getSuitColor()
       {
-      return suitColor;	
+      return suitColor; 
       } // end method getSuitColor
    
    public void setCape(boolean cape)
       {
-      this.hasCape = cape;	
+      this.hasCape = cape;  
       } // end method setCape
       
    public boolean isCaped()
       {
-      return hasCape;	
+      return hasCape;   
       } // end method isCaped
       
-   public abstract String motto();   
 
    } // end abstract class SuperHero
 

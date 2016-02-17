@@ -1,16 +1,35 @@
 public class Friedeggman extends SuperHero
 {
-    
-
+    private String motto;
+    private String capecolor;
+    private boolean hascape;
     public Friedeggman()
     {
+ 
         super();
 
     }
-
-    public String toString()
+    
+    public boolean hascape()
     {
-        return super.toString() + String.format("name:%s\n color:%s \n can buy w/out gadgets? : %B \n upgrades : %s, %s", name, color,option,upgrade1, upgrade2);
+        hascape= false;
+        return hascape;
+    }
+    public String capecolor()
+    {
+        capecolor= "";
+        return capecolor; 
     }
     
+    public String createmotto()
+    {
+        motto= "There's no such thing as sunny side up.";
+        return motto;
+    }
+
+//     public String toString()
+//     {
+//         return super.toString() + String.format("", );
+//     }
+//     
 }
