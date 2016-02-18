@@ -4,7 +4,8 @@ public abstract class SuperHero
    private boolean hasCape;
    
    public abstract String createmotto(); // means that each subclass will have method "createmotto"
-   
+   //public abstract String capecolor();
+   //public abstract boolean hascape();
   
    
    
