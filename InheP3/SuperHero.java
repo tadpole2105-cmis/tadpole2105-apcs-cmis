@@ -7,7 +7,7 @@ public abstract class SuperHero
    //public abstract String capecolor();
    //public abstract boolean hascape();
   
-   
+   public abstract String name();
    
    public SuperHero()
       {

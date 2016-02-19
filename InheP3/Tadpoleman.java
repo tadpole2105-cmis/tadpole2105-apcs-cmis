@@ -4,6 +4,12 @@ public class Tadpoleman extends SuperHero
     private String motto;
     private String capecolor;
     private boolean hascape;
+    private String name;
+    public String name()
+    {
+        return "Tadpoleman";
+    }
+
     public Tadpoleman()
     {
         super();
@@ -16,18 +22,17 @@ public class Tadpoleman extends SuperHero
         return motto;
     }
 
-//     public boolean hascape()
-//     {
-//         hascape= true;
-//         return hascape;
-// 
-//     }
-//     public String capecolor()
-//     {
-//         capecolor= "green";
-//         return capecolor; 
-//     }
-
+    //     public boolean hascape()
+    //     {
+    //         hascape= true;
+    //         return hascape;
+    // 
+    //     }
+    //     public String capecolor()
+    //     {
+    //         capecolor= "green";
+    //         return capecolor; 
+    //     }
 
     //     public String toString()
     //     {

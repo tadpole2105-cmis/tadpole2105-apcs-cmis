@@ -2,9 +2,11 @@
 comment0.params=
 comment0.target=Friedeggman()
 comment1.params=
-comment1.target=boolean\ hascape()
+comment1.target=java.lang.String\ name()
 comment2.params=
-comment2.target=java.lang.String\ capecolor()
+comment2.target=boolean\ hascape()
 comment3.params=
-comment3.target=java.lang.String\ createmotto()
-numComments=4
+comment3.target=java.lang.String\ capecolor()
+comment4.params=
+comment4.target=java.lang.String\ createmotto()
+numComments=5

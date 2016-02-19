@@ -3,11 +3,17 @@ public class Friedeggman extends SuperHero
     private String motto;
     private String capecolor;
     private boolean hascape;
+    private String name;
+    
     public Friedeggman()
     {
  
         super();
 
+    }
+    public String name()
+    {
+        return "friedeggman";
     }
     
     public boolean hascape()

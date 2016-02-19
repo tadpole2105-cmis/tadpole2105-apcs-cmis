@@ -4,6 +4,11 @@ public class Astroidman extends SuperHero
     private String motto;
     private String capecolor;
     private boolean hascape;
+    private String name;
+    public String name()
+    {
+        return "Astroidman";
+    }
     public Astroidman()
     {
         super();

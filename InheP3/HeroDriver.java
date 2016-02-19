@@ -27,12 +27,10 @@ public class HeroDriver
         
         for ( SuperHero hero : allHeroes )
         {
-            System.out.println( hero + "   " + hero.createmotto());
+            System.out.println( hero.name() + "   " + hero.createmotto());
         }
         
-        
-        
-        
+
         
         SuperHero[][] capedhero = new SuperHero[3][3] ; 
 
@@ -40,14 +38,15 @@ public class HeroDriver
         {
             for (int c=0; c < capedhero[0].length; c++  )
             {
-                for ( SuperHero hero : allHeroes )
+                for (SuperHero hero : allHeroes)
                 {
-                    if (hero.isCaped())//iscaped() returns whatever boolean setCape sets
+                    if (hero.isCaped())//iscaped() returns whatever boolean setCape sets (t or f)
                     {
                         capedhero[r][c] = hero;
                         allHeroes.remove(hero);
                     }//has cape?
-                    System.out.println(  hero.createmotto());
+                    
+                    //System.out.println(  );
                 }
                 //capedhero[r][c]= ""; 
 
