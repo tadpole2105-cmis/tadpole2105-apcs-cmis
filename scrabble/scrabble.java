@@ -1,33 +1,39 @@
 
 /**
- * Write a description of class scrabble here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Dual player scrabble
+ * program asks input of points they want to play to
+ * player1 enters a word of at least 6 characters long 
+ * program mixes up the letter of the entered word 
+ * player2 makes as many words as possible from the letters (word must be at least 3 characters long)
+ * 2 points rewarded for each word player2 makes. if no words can be made, player 1 gets #of characters points 
+ * whoever reaches the input point wins
  */
+
+/*
+////////////////////      note                 ///////////////////////////////
+create an array w/ as many slots as there are characters ; use .length()
+then mathradom to mix up slots, then print out 
+isolating characters of string : https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
+
+
+
+
+
+
+
+*/ 
+
 public class scrabble
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class scrabble
-     */
-    public scrabble()
+    int limitPoint = JOptionPane.showInputDialog ("Give your game a limit. Enter the point that you want to play til");
+    
+    public scrabble(String p1)
     {
-        // initialise instance variables
-        x = 0;
+       this.p1 = JOptionPane.showInputDialog ("enter a word of at least 6 characters");
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
     }
 }
+
+

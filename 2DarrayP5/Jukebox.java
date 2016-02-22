@@ -1,10 +1,10 @@
-import javax.swing.JOptionPane;
+import java.util.ArrayList;
 public class Jukebox
 {
 
     int r= 3;
     int c = 4;
-    MySong[][] songList = new MySong[r][c] ;
+    MySong[][] songList = new MySong[r][c] ;//array called "songList" contraining "MySong" objects
     //my song object contains 1 string, 1 int. 
     public Jukebox()
     {
@@ -23,13 +23,32 @@ public class Jukebox
 
     }
 
-    public MySong randomSong()
+    public MySong randomSong() //method called randomSong that return MySong objects
     {
         int randomrow = (int) (Math.random()*(r));
         int randomcol=  (int) (Math.random()*(c));
         return songList[randomrow][randomcol];
     }
 
+    public ArrayList<MySong> playSongofRating(int rating) //we are returning all songs with given rating thus the return type is an arraylist of MySong objects
+    {
+        ArrayList<MySong> songswithrating = new ArrayList<MySong>(); //create a new arrlist that will contain songs with given rating 
+        
+        for (MySong[] rows : songList)
+        {
+            for (MySong slot : rows)//this inner loop will encounter every song, "slot" is each and every song which changes every loop
+            {
+                if (slot.rating == rating) 
+                {
+                    songswithrating.add(slot);
+                }
+            }
+        }
+        
+        return songswithrating; 
+    }
+    
+    
     public String toString()
     {
         String output = new String();
@@ -40,7 +59,7 @@ public class Jukebox
                 output += slot;
             }
 
-            System.out.print( "\n"  );
+            //System.out.println( "\n"  );
         }
         return output;
     }
