@@ -1,10 +1,10 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=658
+objectbench.width=686
 package.editor.height=400
 package.editor.width=560
-package.editor.x=1075
-package.editor.y=543
+package.editor.x=337
+package.editor.y=309
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
@@ -26,7 +26,7 @@ target1.y=10
 target2.editor.height=700
 target2.editor.width=900
 target2.editor.x=95
-target2.editor.y=386
+target2.editor.y=175
 target2.height=50
 target2.name=newPassword
 target2.naviview.expanded=true

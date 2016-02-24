@@ -9,39 +9,37 @@ public class password
     {
         String userLastname =JOptionPane.showInputDialog("enter lastname");
         String userPassword =JOptionPane.showInputDialog("enter password");
-
+        boolean loopagain=true;
         String lowercaseLn = userLastname.toLowerCase();
         String lowercasePw = userPassword.toLowerCase();
-        if (userPassword.length() >= 6)
+        
+        while (loopagain)
         {
-            for (int i=0; i< userPassword.length(); i++)
+            if (lowercasePw .length() >= 6)
             {
-
-                if (lowercaseLn.indexOf(lowercasePw) <= 0) 
+                if (lowercaseLn.indexOf(lowercasePw) < 0)
                 {
-                    if(userPassword.substring(i, i+1).equals("+") || userPassword.substring(i, i+1).equals("-") || userPassword.substring(i, i+1).equals("*") || userPassword.substring(i, i+1).equals("@") ) //if any part of the password contains 
+                    if (lowercasePw .contains("+") || lowercasePw .contains("-") ||  lowercasePw .contains("*") ||  lowercasePw .contains("/") ||  lowercasePw .contains("@") )
                     {
                         System.out.print("logged in");
-                        i= userPassword.length();//break loop
+                        loopagain=false;
                     }
-                    else if ( i == userPassword.length())
+                    else
                     {
-                        System.out.print(userPassword + " does not on contain a non alphabet");
-
+                        lowercasePw = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
                     }
-                }//2nd if: must not contain lastname 
+                }
                 else
-                { 
+                {
                     lowercasePw = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
                 }
             }
 
-        }// 1st if : must be more than 6 letters
-        else 
-        {
-            System.out.print("rejected : less than 6 characters");
-        }// 1st if : must be more than 6 letters
-
+            else
+            {
+                lowercasePw = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
+            }
+        }
     }//end method main
 }
 
@@ -56,4 +54,34 @@ public int indexOf(int ch, int fromIndex): Returns the index within this string 
 int indexOf(String str): Returns the index within this string of the first occurrence of the specified substring. If it does not occur as a substring, -1 is returned.
 
 int indexOf(String str, int fromIndex): Returns the index within this string of the first occurrence of the specified substring, starting at the specified index. If it does not occur, -1 is returned.
+
+if (userPassword.length() >= 6)
+{
+for (int i=0; i< userPassword.length(); i++)
+{
+
+if (lowercaseLn.indexOf(lowercasePw) <= 0) 
+{
+if(userPassword.substring(i, i+1).equals("+") || userPassword.substring(i, i+1).equals("-") || userPassword.substring(i, i+1).equals("*") || userPassword.substring(i, i+1).equals("@") ) //if any part of the password contains 
+{
+System.out.print("logged in");
+i= userPassword.length();//break loop
+}
+else if ( i == userPassword.length())
+{
+System.out.print(userPassword + " does not on contain a non alphabet");
+
+}
+}//2nd if: must not contain lastname 
+else
+{ 
+lowercasePw = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
+}
+}
+
+}// 1st if : must be more than 6 letters
+else 
+{
+System.out.print("rejected : less than 6 characters");
+}// 1st if : must be more than 6 letters
  */
