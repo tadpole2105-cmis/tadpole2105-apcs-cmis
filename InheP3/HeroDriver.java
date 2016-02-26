@@ -24,35 +24,41 @@ public class HeroDriver
         allHeroes.add(astroidman1);
         allHeroes.add(tadpoleman1);
 
-        
         for ( SuperHero hero : allHeroes )
         {
             System.out.println( hero.name() + "   " + hero.createmotto());
         }
-        
 
-        
         SuperHero[][] capedhero = new SuperHero[3][3] ; 
-
+        int i = 0;
         for (int r=0; r < capedhero.length; r++)
         {
             for (int c=0; c < capedhero[0].length; c++  )
             {
-                for (SuperHero hero : allHeroes)
+                if (i< allHeroes.size())
                 {
-                    if (hero.isCaped())//iscaped() returns whatever boolean setCape sets (t or f)
+                    for (SuperHero hero : allHeroes)
                     {
-                        capedhero[r][c] = hero;
-                        allHeroes.remove(hero);
-                    }//has cape?
-                    
-                    //System.out.println(  );
+                        if (hero.isCaped())//iscaped() returns whatever boolean setCape sets (t or f)
+                        {
+                            capedhero[r][c] = hero;
+                            allHeroes.remove(hero);
+
+                        }//has cape?
+                       
+                    }
+                     i=allHeroes.size();
+
                 }
-                //capedhero[r][c]= ""; 
 
             }
-            System.out.print( "\n"  );
-        }
+            //capedhero[r][c]= ""; 
 
+        }
+        System.out.println(capedhero); 
+        
+        System.out.print( "\n"  );
     }
+
 }
+

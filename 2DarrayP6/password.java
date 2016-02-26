@@ -12,27 +12,16 @@ public class password
         boolean loopagain=true;
         String lowercaseLn = userLastname.toLowerCase();
         String lowercasePw = userPassword.toLowerCase();
-        
+
         while (loopagain)
         {
-            if (lowercasePw .length() >= 6)
+            if (lowercasePw .length() >= 6 && lowercaseLn.indexOf(lowercasePw) < 0 && lowercasePw .contains("+") || lowercasePw .contains("-") ||  lowercasePw .contains("*") ||  lowercasePw .contains("/") ||  lowercasePw .contains("@"))
             {
-                if (lowercaseLn.indexOf(lowercasePw) < 0)
-                {
-                    if (lowercasePw .contains("+") || lowercasePw .contains("-") ||  lowercasePw .contains("*") ||  lowercasePw .contains("/") ||  lowercasePw .contains("@") )
-                    {
+                
                         System.out.print("logged in");
                         loopagain=false;
-                    }
-                    else
-                    {
-                        lowercasePw = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
-                    }
-                }
-                else
-                {
-                    lowercasePw = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
-                }
+                    
+                
             }
 
             else
