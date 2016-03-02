@@ -1,22 +1,21 @@
 public class Graduate  extends Student
 {
 
-    public Graduate()
+    public Graduate(String name, String major, int units)
     {
-        super(name, yob, mob, dob);
-
+        super(name, major, units);
     }
 
     public int CalcTuition(int units)
     {
         int tuition=0;
-        tuition=units*300;
+        tuition=units*500;
         return tuition;
     }
 
     public String toString()
     {
-        return super.toString() + String.format();
+        return "grad ; " + super.toString() ;
     }
 
 }

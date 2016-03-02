@@ -1,9 +1,9 @@
 
 public abstract class Student 
 {
-    private String name;
-    private String major;
-    private int units;
+     String name;
+     String major;
+     int units;
     
     public Student(String name, String major, int units)
     {
@@ -12,8 +12,14 @@ public abstract class Student
         this.units=units;
     }
 
+    
     abstract public int CalcTuition(int units);
 
- 
+    public String toString()
+    {
+        return String.format("name: %s, major %s, units taken: %d", name, major, units);
+    }
+
+    
 
 }

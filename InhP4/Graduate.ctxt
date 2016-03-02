@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=name\ major\ units
-comment0.target=Student(java.lang.String,\ java.lang.String,\ int)
+comment0.target=Graduate(java.lang.String,\ java.lang.String,\ int)
 comment1.params=units
 comment1.target=int\ CalcTuition(int)
 comment2.params=
