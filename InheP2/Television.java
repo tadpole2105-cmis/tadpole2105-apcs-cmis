@@ -1,4 +1,4 @@
-public class Television 
+public abstract class Television 
    { 
    private String model; 
    private double price;

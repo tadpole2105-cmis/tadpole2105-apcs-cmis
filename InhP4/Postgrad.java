@@ -15,7 +15,7 @@ public class Postgrad extends Graduate
 
     public String toString()
     {
-        return "postgrad ; " + super.toString() ;
+        return "post"+super.toString() ;
     }
 
 }

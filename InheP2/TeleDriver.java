@@ -9,6 +9,10 @@ public class TeleDriver
        alltele[2]= new LCD("LED Platinum", 399.99);
        alltele[3]= new Plasma("Plasma Sapphire", 499.99);
     
+       ArrayList<Television>  alltele1 = new ArrayList<Television>();
+
+       LEB led = new LED("Sara", "Biology", 0);
+       
        for ( Television tv: alltele )
         {
             System.out.println(tv + "\n");
