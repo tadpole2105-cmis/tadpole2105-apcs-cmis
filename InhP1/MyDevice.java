@@ -12,6 +12,6 @@ public class MyDevice
 
     public String toString()
     {
-        return String.format("Product line: %s\n uses : %s \n developed by %s ", productline,  developer);
+        return String.format("Product line: %s \n developed by %s ", productline,  developer);
     }
 }

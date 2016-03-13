@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=HDTV()
+comment1.params=
+comment1.target=boolean\ turnOn()
+comment2.params=
+comment2.target=boolean\ turnoff()
+comment3.params=
+comment3.target=java.lang.String\ type()
+comment4.params=
+comment4.target=java.lang.String\ connectHDMI()
+numComments=5

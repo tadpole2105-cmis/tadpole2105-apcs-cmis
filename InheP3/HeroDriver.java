@@ -24,39 +24,73 @@ public class HeroDriver
         allHeroes.add(astroidman1);
         allHeroes.add(tadpoleman1);
 
+        System.out.println(" all heroes \n");
         for ( SuperHero hero : allHeroes )
         {
             System.out.println( hero.name() + "   " + hero.createmotto());
         }
-
+        //array of all heroes is called allHeroes
         SuperHero[][] capedhero = new SuperHero[3][3] ; 
         int i = 0;
+
+        System.out.println(" \n allHeroes arraylist after removing ones w cape \n");
         for (int r=0; r < capedhero.length; r++)
         {
             for (int c=0; c < capedhero[0].length; c++  )
             {
                 if (i< allHeroes.size())
                 {
-                    for (SuperHero hero : allHeroes)
+                    if (allHeroes.get(i).isCaped()==true)
                     {
-                        if (hero.isCaped())//iscaped() returns whatever boolean setCape sets (t or f)
-                        {
-                            capedhero[r][c] = hero;
-                            allHeroes.remove(hero);
-
-                        }//has cape?
-                       
+                        capedhero[r][c]=allHeroes.get(i);
+                        allHeroes.remove(allHeroes.get(i));
                     }
-                     i=allHeroes.size();
+                    else
+                    {
+                        i++;
+                    }
+                }
+            }
+            //capedhero[r][c]= ""; 
+        }
 
+        for(int r = 0; r < capedhero.length; r++)
+        {
+            for(int c = 0; c < capedhero[0].length; c++)
+            {
+                if(capedhero[r][c] != null)
+                {
+                    System.out.print(capedhero[r][c].name() + "\t");
+                }
+                else
+                {
+                    System.out.print(capedhero[r][c] + "\t");
                 }
 
             }
-            //capedhero[r][c]= ""; 
-
+            System.out.println();
         }
-        System.out.println(capedhero); 
-        
+        System.out.println();
+        System.out.println(" removed heroes from allheroes arraylist \n");
+        for(int r = 0; r < capedhero.length; r++)
+        {
+            for(int c = 0; c < capedhero[0].length; c++)
+            {
+                if(capedhero[r][c] != null)
+                {
+                    System.out.print(capedhero[r][c].name() + "\t");
+                }
+            }
+            System.out.println();
+        }
+        /*
+        if (hero.isCaped())//iscaped() returns whatever boolean setCape sets (t or f)
+        {
+        capedhero[r][c] = hero;
+        allHeroes.remove(hero);
+
+        }//has cape?
+         */
         System.out.print( "\n"  );
     }
 

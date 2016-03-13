@@ -20,7 +20,7 @@ public class Astroidman extends SuperHero
         motto= "I love Tadpoleman";
         return motto;
     }
-     public boolean hascape()
+     public boolean isCaped()
     {
         hascape= true;
         return hascape;

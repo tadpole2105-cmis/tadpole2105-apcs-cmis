@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 public class TeleDriver
 {
     public static void main(String[] args)
@@ -11,7 +11,7 @@ public class TeleDriver
     
        ArrayList<Television>  alltele1 = new ArrayList<Television>();
 
-       LEB led = new LED("Sara", "Biology", 0);
+
        
        for ( Television tv: alltele )
         {

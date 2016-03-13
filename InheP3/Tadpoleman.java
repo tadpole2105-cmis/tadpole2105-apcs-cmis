@@ -16,6 +16,12 @@ public class Tadpoleman extends SuperHero
 
     }
 
+    public boolean isCaped()
+    {
+        hascape= false;
+        return hascape;
+    }
+
     public String createmotto()
     {
         motto = "Only live in clean water";

@@ -16,7 +16,7 @@ public class Friedeggman extends SuperHero
         return "friedeggman";
     }
     
-    public boolean hascape()
+    public boolean isCaped()
     {
         hascape= false;
         return hascape;
