@@ -1,0 +1,16 @@
+#Greenfoot properties
+#Mon Mar 28 09:51:49 ICT 2016
+class.apples.image=apple1.png
+class.rottenApple.superclass=greenfoot.Actor
+class.MyWorld.image=bluerock.jpg
+mainWindow.width=850
+class.Adam.superclass=greenfoot.Actor
+class.MyWorld.superclass=greenfoot.World
+project.charset=UTF-8
+version=2.8.0
+class.apples.superclass=greenfoot.Actor
+world.lastInstantiated=MyWorld
+mainWindow.y=40
+mainWindow.x=40
+mainWindow.height=600
+class.Adam.image=ppl3.png

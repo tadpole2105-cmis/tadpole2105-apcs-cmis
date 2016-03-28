@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Adam
+comment0.text=\n\ Wombat.\ A\ Wombat\ moves\ forward\ until\ it\ can't\ do\ so\ anymore,\ at\n\ which\ point\ it\ turns\ left.\ If\ a\ wombat\ finds\ a\ leaf,\ it\ eats\ it.\n\ \n\ @author\ Michael\ Kolling\n\ @version\ 1.0.1\n
+comment1.params=
+comment1.target=Adam()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Do\ whatever\ the\ wombat\ likes\ to\ to\ just\ now.\n
+numComments=3
