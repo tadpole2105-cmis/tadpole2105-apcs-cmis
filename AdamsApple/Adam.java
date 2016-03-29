@@ -33,39 +33,56 @@ public class Adam extends Actor
         {
             move(3);
         }
-        /*
-        else if (hitApple()) 
+        if (hitApple()) 
         {
             eatApple();
         }
-        */
+        jump();
     }
 
-    /*
-    
+    public void jump()
+    {
+        if (Greenfoot.isKeyDown("up") )
+        {
+            if (getY() >=  getWorld().getHeight() -5)
+            {
+                jump();
+            }
+        }
+    }
+ 
     public boolean hitApple()
     {
-        Actor apple = getOneObjectAtOffset(0, 0, Apple.class); //0 x, 0y, directly over apple object
-        if(apple != null) {
+        Actor apple = getOneObjectAtOffset(0, 0, apples.class); //0 x, 0y, directly over apple object
+        Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
+        if(apple != null) 
+        {
             return true;
         }
-        else {
+        else if(rApple != null) 
+        {
+            return true;
+        }
+        else
+        {
             return false;
         }
     }
     
     public void eatApple()
     {
-        Actor apple = getOneObjectAtOffset(0, 0, apple.class);
-        if(apple != null) 
+        Actor apple = getOneObjectAtOffset(0, 0, apples.class);
+        Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
+        if(apple != null || rApple != null) 
         {
-            // eat the leaf...
+           
             getWorld().removeObject(apple);
+            getWorld().removeObject(rApple);
             applesColleceted = applesColleceted + 1; 
         }
     }
    
-  
+    /*
     public int getApplesCollected()
     {
         return applesCollected;
