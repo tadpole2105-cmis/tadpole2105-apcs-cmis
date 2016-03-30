@@ -14,7 +14,8 @@ public class Adam extends Actor
 {
     
     private int applesColleceted;
-
+    private int ySpeed;
+    
     public Adam()
     {
         int applesCollected = 0;
@@ -42,15 +43,29 @@ public class Adam extends Actor
 
     public void jump()
     {
-        if (Greenfoot.isKeyDown("up") )
+       int groundLevel = getWorld().getHeight() - getImage().getHeight()/2; //getImage 
+        boolean onGround = (getY() == groundLevel);
+        if (!onGround) // in middle of jump
         {
-            if (getY() >=  getWorld().getHeight() -5)
+            ySpeed++; // adds gravity effect
+            setLocation(getX(), getY()+ySpeed); // fall (rising slower or falling faster)
+            if (getY()>=groundLevel) // has landed (reached ground level)
             {
-                jump();
+                setLocation(getX(), groundLevel); // set on ground
+                Greenfoot.getKey(); // clears any key pressed during jump
+           }
+        }
+        else // on ground
+        {
+            if ("space".equals(Greenfoot.getKey())) // jump key detected
+            {
+                ySpeed = -15; // add jump speed
+                setLocation(getX(), getY()+ySpeed); // leave ground
             }
         }
     }
  
+    
     public boolean hitApple()
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class); //0 x, 0y, directly over apple object
