@@ -39,8 +39,16 @@ public class Adam extends Actor
             eatApple();
         }
         jump();
-    }
+        
 
+    }
+    
+    public boolean isTouchingWall()
+    {
+        int locateWall = getImage().getHeight()/2; 
+        boolean touchWall = 
+    }
+    
     public void jump()
     {
        int groundLevel = getWorld().getHeight() - getImage().getHeight()/2; //getImage 

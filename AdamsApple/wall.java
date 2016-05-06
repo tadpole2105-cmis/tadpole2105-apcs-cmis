@@ -11,9 +11,10 @@ public class wall extends Actor
     public void act()
     {
         //appear();
-        remove();
+        //remove();
     }
 
+    
     public void remove()
     {
         while (true)

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Mar 30 13:27:55 ICT 2016
+#Fri May 06 14:00:32 ICT 2016
 target4.type=ClassTarget
 class.apples.superclass=greenfoot.Actor
 dependency3.from=MyWorld
@@ -36,7 +36,7 @@ target5.showInterface=false
 package.numTargets=5
 target1.type=ClassTarget
 class.wall.superclass=greenfoot.Actor
-editor.swing.0.width=701
+editor.swing.0.width=0
 editor.swing.0.y=0
 target1.typeParameters=
 editor.swing.0.x=0
@@ -77,7 +77,7 @@ target5.typeParameters=
 world.lastInstantiated=MyWorld
 mainWindow.height=600
 target2.showInterface=false
-editor.swing.0.height=700
+editor.swing.0.height=0
 target3.name=wall
 project.charset=UTF-8
 target3.width=80
