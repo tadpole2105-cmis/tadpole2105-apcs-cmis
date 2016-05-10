@@ -43,10 +43,21 @@ public class Adam extends Actor
 
     }
     
-    public boolean isTouchingWall()
+    public boolean checkObjRight()//private cuz only adam uses it
     {
-        int locateWall = getImage().getHeight()/2; 
-        boolean touchWall = 
+        int getSpiteWidth = getImage().getWidth();
+        int xDistance = (int) (getSpiteWidth/2);
+        Actor rightWall = getOneObjectAtOffset(xDistance, 0, Platform.class);
+        if (rightWall == null)
+        {
+            return false;
+        }
+        else 
+        {
+            stopAtRightWall(rightwall);
+            return true;
+        }
+        
     }
     
     public void jump()

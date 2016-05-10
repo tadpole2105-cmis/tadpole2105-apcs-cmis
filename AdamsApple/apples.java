@@ -14,8 +14,6 @@ public class apples extends Actor
         remove();
     }
 
-    
-
     public void fall()
     {
         setLocation(getX(), getY()+1);

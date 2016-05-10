@@ -33,4 +33,6 @@ public class rottenApples extends Actor
             getWorld().removeObject(this);
         }
     }
+    
+    
 }
