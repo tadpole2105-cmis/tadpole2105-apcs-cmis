@@ -35,7 +35,8 @@ public class MyWorld extends World
         addObject(rottenapples,155,73);
         Adam adam = new Adam();
         addObject(adam,387,371);
-    }
+    wall.setLocation(255,353);
+}
     private int shorttime = 1;// for apple
     private int longtime = 0;// for rottenA
     private int count = 1;

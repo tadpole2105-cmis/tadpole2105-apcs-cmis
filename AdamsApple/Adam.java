@@ -12,10 +12,10 @@ import java.util.ArrayList;
  */
 public class Adam extends Actor
 {
-    
+
     private int applesColleceted;
     private int ySpeed;
-    
+
     public Adam()
     {
         int applesCollected = 0;
@@ -39,30 +39,60 @@ public class Adam extends Actor
             eatApple();
         }
         jump();
-        
+        checkObjRight();
+        checkObjLeft();
 
     }
-    
-    public boolean checkObjRight()//private cuz only adam uses it
+
+    public boolean checkObjRight()
     {
         int getSpiteWidth = getImage().getWidth();
         int xDistance = (int) (getSpiteWidth/2);
-        Actor rightWall = getOneObjectAtOffset(xDistance, 0, Platform.class);
+        Actor rightWall = getOneObjectAtOffset(xDistance, 0, wall.class);
         if (rightWall == null)
         {
             return false;
         }
         else 
         {
-            stopAtRightWall(rightwall);
+            stopAtRightWall(rightWall);
             return true;
         }
-        
     }
-    
+    public void stopAtRightWall(Actor rightWall)
+    {
+        int wallWidth = rightWall.getImage().getWidth();
+        int newX = rightWall.getX() -(wallWidth + getImage().getHeight())/2;
+        setLocation(newX, getY());
+
+    }
+    public boolean checkObjLeft()
+    {
+        int getSpiteWidth = getImage().getWidth();
+        int xDistance = (int) (getSpiteWidth/2);
+        Actor leftWall = getOneObjectAtOffset(xDistance - 50, 0, wall.class);
+        if (leftWall == null)
+        {
+            return false;
+        }
+        else 
+        {
+            stopAtLeftWall(leftWall);
+            return true;
+        }
+    }
+
+    public void stopAtLeftWall(Actor leftWall)
+    {
+        int wallWidth = leftWall.getImage().getWidth();
+        int newX = leftWall.getX() +(wallWidth + getImage().getHeight())/2;
+        setLocation(newX  , getY());
+
+    }
+
     public void jump()
     {
-       int groundLevel = getWorld().getHeight() - getImage().getHeight()/2; //getImage 
+        int groundLevel = getWorld().getHeight() - getImage().getHeight()/2; //getImage 
         boolean onGround = (getY() == groundLevel);
         if (!onGround) // in middle of jump
         {
@@ -72,7 +102,7 @@ public class Adam extends Actor
             {
                 setLocation(getX(), groundLevel); // set on ground
                 Greenfoot.getKey(); // clears any key pressed during jump
-           }
+            }
         }
         else // on ground
         {
@@ -83,8 +113,7 @@ public class Adam extends Actor
             }
         }
     }
- 
-    
+
     public boolean hitApple()
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class); //0 x, 0y, directly over apple object
@@ -102,24 +131,24 @@ public class Adam extends Actor
             return false;
         }
     }
-    
+
     public void eatApple()
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class);
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
         if(apple != null || rApple != null) 
         {
-           
+
             getWorld().removeObject(apple);
             getWorld().removeObject(rApple);
             applesColleceted = applesColleceted + 1; 
         }
     }
-   
+
     /*
     public int getApplesCollected()
     {
-        return applesCollected;
+    return applesCollected;
     }
      */
 }
