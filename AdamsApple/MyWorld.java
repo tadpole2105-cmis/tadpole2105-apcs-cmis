@@ -46,7 +46,7 @@ public class MyWorld extends World
         {
             rottenApples d1 = new rottenApples();//create new rottenA
             addObject(d1, (int)(Math.random()*400) + 1, 0);//put it in a random x coordinate
-            longtime = 1200; //frequency of appearance
+            longtime = 400; //frequency of appearance
             count = 1; //y set again
         }
         if(true)//from counter?

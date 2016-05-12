@@ -15,7 +15,7 @@ public class Adam extends Actor
 
     private int applesColleceted;
     private int ySpeed;
-
+    private int lifeLeft=2;
     public Adam()
     {
         int applesCollected = 0;
@@ -41,7 +41,7 @@ public class Adam extends Actor
         jump();
         checkObjRight();
         checkObjLeft();
-
+        hitRottenApple();
     }
 
     public boolean checkObjRight()
@@ -59,6 +59,7 @@ public class Adam extends Actor
             return true;
         }
     }
+
     public void stopAtRightWall(Actor rightWall)
     {
         int wallWidth = rightWall.getImage().getWidth();
@@ -66,6 +67,7 @@ public class Adam extends Actor
         setLocation(newX, getY());
 
     }
+
     public boolean checkObjLeft()
     {
         int getSpiteWidth = getImage().getWidth();
@@ -118,6 +120,7 @@ public class Adam extends Actor
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class); //0 x, 0y, directly over apple object
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
+
         if(apple != null) 
         {
             return true;
@@ -129,6 +132,21 @@ public class Adam extends Actor
         else
         {
             return false;
+        }
+    }
+
+    public void hitRottenApple()
+    {
+        Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
+        if(rApple != null) 
+        {
+            lifeLeft--;
+            if (lifeLeft==0)
+            {
+                GameOver gameover= new GameOver();
+                MyWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+                Greenfoot.stop();
+            }
         }
     }
 

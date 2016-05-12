@@ -18,13 +18,15 @@ public class rottenApples extends Actor
     {
         move(2);
         setLocation(getX(), getY()+1);
+        int randomTurn= (int) (Math.random()*70);
         if(getX() <= 5 || getX() >= getWorld().getWidth() -5)
         {
-            turn(30);
+            turn( randomTurn );
+
         }
-        
+
     }
-    
+
     public void remove()
     {
         //Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
@@ -33,6 +35,5 @@ public class rottenApples extends Actor
             getWorld().removeObject(this);
         }
     }
-    
-    
+
 }
