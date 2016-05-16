@@ -144,7 +144,8 @@ public class Adam extends Actor
             if (lifeLeft==0)
             {
                 GameOver gameover= new GameOver();
-                MyWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+                World myWorld = getWorld();
+                myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
                 Greenfoot.stop();
             }
         }

@@ -11,7 +11,7 @@ public class apples extends Actor
     public void act()
     {
         fall();
-        remove();
+        remove();//add score before removing
     }
 
     public void fall()
@@ -22,9 +22,13 @@ public class apples extends Actor
 
     public void remove()
     {
+        
         //Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
         if(getY() >=  getWorld().getHeight() -5)
         {
+            MyWorld world;
+            world= (MyWorld)getWorld();
+            world.getCounter().addScore(); 
             getWorld().removeObject(this);
         }
     }

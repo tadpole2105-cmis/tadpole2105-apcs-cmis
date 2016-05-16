@@ -21,6 +21,7 @@ public class MyWorld extends World
         act();
     }
 
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -35,8 +36,13 @@ public class MyWorld extends World
         addObject(rottenapples,155,73);
         Adam adam = new Adam();
         addObject(adam,387,371);
-    wall.setLocation(255,353);
-}
+        wall.setLocation(255,353);
+        // Counter counter = new Counter();
+        // addObject(counter,45,37);
+        // counter.setLocation(62,30);
+        Counter counter = new Counter();
+        addObject(counter,83,38);
+    }
     private int shorttime = 1;// for apple
     private int longtime = 0;// for rottenA
     private int count = 1;
@@ -46,7 +52,7 @@ public class MyWorld extends World
         {
             rottenApples d1 = new rottenApples();//create new rottenA
             addObject(d1, (int)(Math.random()*400) + 1, 0);//put it in a random x coordinate
-            longtime = 400; //frequency of appearance
+            longtime = 200; //frequency of appearance; lower num= more frequent 
             count = 1; //y set again
         }
         if(true)//from counter?
@@ -66,7 +72,7 @@ public class MyWorld extends World
             shorttime--;
             count = 1;
         }
-        
+
     }    
 
     private boolean counter()
@@ -77,10 +83,7 @@ public class MyWorld extends World
         }
         return count == 0; //count is 0 which is true threfore statement is true
     }
-    
-    
-    
+
     
 }    
-
 
