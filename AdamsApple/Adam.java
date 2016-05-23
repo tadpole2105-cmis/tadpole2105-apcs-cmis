@@ -15,7 +15,7 @@ public class Adam extends Actor
 
     private int applesColleceted;
     private int ySpeed;
-    private int lifeLeft=2;
+    private int livesLeft=3;
     public Adam()
     {
         int applesCollected = 0;
@@ -140,8 +140,8 @@ public class Adam extends Actor
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
         if(rApple != null) 
         {
-            lifeLeft--;
-            if (lifeLeft==0)
+            livesLeft--;
+            if (livesLeft==0)
             {
                 GameOver gameover= new GameOver();
                 World myWorld = getWorld();
@@ -150,13 +150,32 @@ public class Adam extends Actor
             }
         }
     }
+    
+    public int getLivesLeft()
+    {
+        return livesLeft;
+    }
 
     public void eatApple()
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class);
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
-        if(apple != null || rApple != null) 
+        if(apple != null  ) 
         {
+            MyWorld world;
+            world= (MyWorld)getWorld();
+            world.getScore().addScore(); 
+
+            getWorld().removeObject(apple);
+            getWorld().removeObject(rApple);
+            applesColleceted = applesColleceted + 1; 
+        }
+        
+        else if (rApple != null)
+        {
+            MyWorld world;
+            world= (MyWorld)getWorld();
+            world.getLives().deductLives(); 
 
             getWorld().removeObject(apple);
             getWorld().removeObject(rApple);

@@ -26,9 +26,6 @@ public class apples extends Actor
         //Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
         if(getY() >=  getWorld().getHeight() -5)
         {
-            MyWorld world;
-            world= (MyWorld)getWorld();
-            world.getCounter().addScore(); 
             getWorld().removeObject(this);
         }
     }
