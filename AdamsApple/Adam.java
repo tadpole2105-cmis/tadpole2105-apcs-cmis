@@ -140,8 +140,8 @@ public class Adam extends Actor
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
         if(rApple != null) 
         {
-            livesLeft--;
-            if (livesLeft==0)
+            livesLeft--;//this is for game over only, not for the lives counter
+            if (livesLeft>=0)
             {
                 GameOver gameover= new GameOver();
                 World myWorld = getWorld();
@@ -151,7 +151,7 @@ public class Adam extends Actor
         }
     }
     
-    public int getLivesLeft()
+    public int getLivesLeft()//need to use livesLeft variable in the counter class
     {
         return livesLeft;
     }
@@ -160,6 +160,7 @@ public class Adam extends Actor
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class);
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
+        
         if(apple != null  ) 
         {
             MyWorld world;
@@ -168,7 +169,7 @@ public class Adam extends Actor
 
             getWorld().removeObject(apple);
             getWorld().removeObject(rApple);
-            applesColleceted = applesColleceted + 1; 
+ 
         }
         
         else if (rApple != null)
@@ -179,7 +180,7 @@ public class Adam extends Actor
 
             getWorld().removeObject(apple);
             getWorld().removeObject(rApple);
-            applesColleceted = applesColleceted + 1; 
+             
         }
     }
 
