@@ -74,7 +74,13 @@ public class MyWorld extends World
         if(longtime==0) //always true
         {
             rottenApples d1 = new rottenApples();//create new rottenA
+            Bomb bomb = new Bomb();
+            Barrel barrel = new Barrel();
+            
             addObject(d1, (int)(Math.random()*400) + 1, 0);//put it in a random x coordinate
+            addObject(bomb, (int)(Math.random()*400) + 1, 0);
+            addObject(barrel, (int)(Math.random()*400) + 1, 0);
+            
             longtime = 200; //frequency of appearance; lower num= more frequent 
             count = 1; //y set again
         }

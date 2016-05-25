@@ -42,6 +42,7 @@ public class Adam extends Actor
         checkObjRight();
         checkObjLeft();
         hitRottenApple();
+        hitEnemy();
     }
 
     public boolean checkObjRight()
@@ -150,7 +151,7 @@ public class Adam extends Actor
             }
         }
     }
-    
+
     public int getLivesLeft()//need to use livesLeft variable in the counter class
     {
         return livesLeft;
@@ -168,10 +169,9 @@ public class Adam extends Actor
             world.getScore().addScore(); 
 
             getWorld().removeObject(apple);
-            getWorld().removeObject(rApple);
- 
+
         }
-        
+
         else if (rApple != null)
         {
             MyWorld world;
@@ -180,7 +180,32 @@ public class Adam extends Actor
 
             getWorld().removeObject(apple);
             getWorld().removeObject(rApple);
-             
+
+        }
+
+
+    }
+
+    public void hitEnemy()
+    {
+        Actor bomb = getOneObjectAtOffset(0, 0, Bomb.class);
+        Actor barrel = getOneObjectAtOffset(0, 0, Barrel.class);
+        if ( bomb!= null || barrel != null )
+        {
+
+            for (int i = 5; i  <= 0 ; i --)
+            {
+                if (i ==0)
+                {
+                    MyWorld world;
+                    world= (MyWorld)getWorld();
+                    world.getLives().deductLives(); 
+                }
+            }
+
+            getWorld().removeObject(bomb);
+            getWorld().removeObject(barrel);
+
         }
     }
 
