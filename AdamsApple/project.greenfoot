@@ -1,8 +1,8 @@
 #Greenfoot properties
-#Wed May 25 12:58:23 ICT 2016
+#Fri May 27 09:05:19 ICT 2016
 dependency9.type=UsesDependency
-class.Bomb.image=bomb.png
 target4.type=ClassTarget
+class.Bomb.image=bomb.png
 class.apples.superclass=greenfoot.Actor
 dependency3.from=MyWorld
 target3.height=50
@@ -15,8 +15,8 @@ dependency12.from=apples
 dependency11.to=MyWorld
 target4.name=Counter
 class.Enemy.superclass=greenfoot.Actor
-class.Barrel.image=barrel.png
 target4.typeParameters=
+class.Barrel.image=barrel.png
 class.Adam.superclass=greenfoot.Actor
 dependency12.type=UsesDependency
 readme.width=47

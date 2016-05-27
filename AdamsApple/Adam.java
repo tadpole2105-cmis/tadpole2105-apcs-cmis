@@ -16,6 +16,9 @@ public class Adam extends Actor
     private int applesColleceted;
     private int ySpeed;
     private int livesLeft=3;
+    private int BombBarrel=5;
+    private int applesMissed=5;
+    
     public Adam()
     {
         int applesCollected = 0;
@@ -42,9 +45,14 @@ public class Adam extends Actor
         checkObjRight();
         checkObjLeft();
         hitRottenApple();
-        hitEnemy();
+        applesMissed();
     }
 
+    public void applesMissed()
+    {
+        
+       
+    }
     public boolean checkObjRight()
     {
         int getSpiteWidth = getImage().getWidth();
@@ -139,10 +147,13 @@ public class Adam extends Actor
     public void hitRottenApple()
     {
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
-        if(rApple != null) 
+        Actor bomb = getOneObjectAtOffset(0, 0, Bomb.class);
+        Actor barrel = getOneObjectAtOffset(0, 0, Barrel.class);
+        if(rApple != null ) 
         {
             livesLeft--;//this is for game over only, not for the lives counter
-            if (livesLeft>=0)
+
+            if (livesLeft==0)
             {
                 GameOver gameover= new GameOver();
                 World myWorld = getWorld();
@@ -150,7 +161,32 @@ public class Adam extends Actor
                 Greenfoot.stop();
             }
         }
+        else if (bomb!= null || barrel != null) //every 5 of either bomb or barrel eaten, deduct 1 from lives left 
+        {
+            BombBarrel--;
+            getWorld().removeObject(bomb);
+            getWorld().removeObject(barrel);
+
+            if(BombBarrel==0)
+            {
+                livesLeft--;
+                MyWorld world;
+                world= (MyWorld)getWorld();
+                world.getLives().deductLives(); 
+
+                if (livesLeft==0)
+                {
+                    GameOver gameover= new GameOver();
+                    World myWorld = getWorld();
+                    myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+                    Greenfoot.stop();
+                }
+            }
+
+        }
+
     }
+
 
     public int getLivesLeft()//need to use livesLeft variable in the counter class
     {
@@ -161,7 +197,7 @@ public class Adam extends Actor
     {
         Actor apple = getOneObjectAtOffset(0, 0, apples.class);
         Actor rApple = getOneObjectAtOffset(0, 0, rottenApples.class);
-        
+
         if(apple != null  ) 
         {
             MyWorld world;
@@ -183,31 +219,8 @@ public class Adam extends Actor
 
         }
 
-
     }
 
-    public void hitEnemy()
-    {
-        Actor bomb = getOneObjectAtOffset(0, 0, Bomb.class);
-        Actor barrel = getOneObjectAtOffset(0, 0, Barrel.class);
-        if ( bomb!= null || barrel != null )
-        {
-
-            for (int i = 5; i  <= 0 ; i --)
-            {
-                if (i ==0)
-                {
-                    MyWorld world;
-                    world= (MyWorld)getWorld();
-                    world.getLives().deductLives(); 
-                }
-            }
-
-            getWorld().removeObject(bomb);
-            getWorld().removeObject(barrel);
-
-        }
-    }
 
     /*
     public int getApplesCollected()

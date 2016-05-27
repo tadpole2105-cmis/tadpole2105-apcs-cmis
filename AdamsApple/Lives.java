@@ -21,7 +21,6 @@ public class Lives extends Actor
 
     public void deductLives()
     {
-
         lives--;
     }
 }
