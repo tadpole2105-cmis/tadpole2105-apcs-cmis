@@ -8,11 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    
+
     Score score = new Score();
     Lives lives = new Lives();
-    
-    
+
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -23,20 +22,21 @@ public class MyWorld extends World
         super(600, 400, 1); 
         prepare();
         act();
+
     }
+
+    
 
     public Score getScore()
     {
         return score;
     }
-    
+
     public Lives getLives()
     {
         return lives;
     }
-    
-    
-    
+
     public boolean counter()
     {
         if(count > 0)//count==1
@@ -45,6 +45,7 @@ public class MyWorld extends World
         }
         return count == 0; //count is 0 which is true threfore statement is true
     }
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -76,11 +77,11 @@ public class MyWorld extends World
             rottenApples d1 = new rottenApples();//create new rottenA
             Bomb bomb = new Bomb();
             Barrel barrel = new Barrel();
-            
+
             addObject(d1, (int)(Math.random()*400) + 1, 0);//put it in a random x coordinate
             addObject(bomb, (int)(Math.random()*400) + 1, 0);
             addObject(barrel, (int)(Math.random()*400) + 1, 0);
-            
+
             longtime = 200; //frequency of appearance; lower num= more frequent 
             count = 1; //y set again
         }
@@ -104,8 +105,4 @@ public class MyWorld extends World
 
     }    
 
-    
-
-    
 }    
-

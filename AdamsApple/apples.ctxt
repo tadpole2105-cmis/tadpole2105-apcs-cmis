@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=void\ fall()
 comment4.params=
 comment4.target=void\ remove()
-numComments=5
+comment5.params=
+comment5.target=void\ applesMissed()
+numComments=6

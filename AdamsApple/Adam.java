@@ -18,7 +18,7 @@ public class Adam extends Actor
     private int livesLeft=3;
     private int BombBarrel=5;
     private int applesMissed=5;
-    
+
     public Adam()
     {
         int applesCollected = 0;
@@ -45,14 +45,11 @@ public class Adam extends Actor
         checkObjRight();
         checkObjLeft();
         hitRottenApple();
-        applesMissed();
+
     }
 
-    public void applesMissed()
-    {
-        
-       
-    }
+
+
     public boolean checkObjRight()
     {
         int getSpiteWidth = getImage().getWidth();
@@ -187,7 +184,6 @@ public class Adam extends Actor
 
     }
 
-
     public int getLivesLeft()//need to use livesLeft variable in the counter class
     {
         return livesLeft;
@@ -220,7 +216,6 @@ public class Adam extends Actor
         }
 
     }
-
 
     /*
     public int getApplesCollected()
